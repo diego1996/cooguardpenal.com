@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import index, about, services, news, contact, portal
 
 urlpatterns = [
@@ -8,6 +8,9 @@ urlpatterns = [
     path('noticias/', news, name='website_news'),
     path('contacto/', contact, name='website_contact'),
     path('portal/', portal, name='website_portal'),
+    
+    # Sistema de chat con N8N
+    path('api/chat/', include('website.urls_chat')),
 ]
 
 

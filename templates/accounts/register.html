@@ -2,105 +2,167 @@
 {% block title %}Pre-registro - COOGUARDPENAL Ltda.{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero section-sm" style="background: linear-gradient(135deg, var(--primary-900), var(--guard-blue)); position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.6;"></div>
+<!-- Hero Section Registro Espectacular -->
+<section class="hero-register" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; margin-top: var(--space-8); margin-bottom: var(--space-16); padding: var(--space-16) 0;">
+    <!-- Patrón de fondo de registro -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 25% 35%, rgba(16, 185, 129, 0.08) 2px, transparent 2px), radial-gradient(circle at 75% 65%, rgba(245, 158, 11, 0.06) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.7;"></div>
+    
+    <!-- Decoraciones de afiliación flotantes -->
+    <div style="position: absolute; top: 12%; left: 8%; width: 95px; height: 95px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.3rem; animation: float 5s ease-in-out infinite;">🛡️</div>
+    <div style="position: absolute; top: 18%; right: 10%; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; animation: float 7s ease-in-out infinite reverse; transform: rotate(15deg);">📝</div>
+    <div style="position: absolute; bottom: 22%; left: 12%; width: 85px; height: 85px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; animation: float 6s ease-in-out infinite; transform: rotate(-12deg);">🤝</div>
+    <div style="position: absolute; bottom: 18%; right: 12%; width: 90px; height: 90px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; animation: float 8s ease-in-out infinite reverse;">✨</div>
+
     <div class="container" style="position: relative; z-index: 2;">
-        <div class="hero-content text-center">
-            <h1 class="hero-title animate-fade-in-down" style="color: white; font-size: var(--text-4xl); margin-bottom: var(--space-6);">
-                🛡️ Pre-registro<br>
-                <span style="background: linear-gradient(135deg, var(--warning), #EAB308); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    COOGUARDPENAL
+        <div class="text-center">
+            <!-- Badge superior de afiliación -->
+            <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); backdrop-filter: blur(10px); border: 1px solid rgba(16, 185, 129, 0.3); padding: var(--space-4) var(--space-8); border-radius: var(--radius-full); margin-bottom: var(--space-8); animation: fadeInDown 1s ease-out;">
+                <span style="color: #10B981; font-weight: 700; font-size: var(--text-base); text-transform: uppercase; letter-spacing: 1px;">
+                    🚀 Únete a la Familia • Pre-registro Exclusivo
+                </span>
+            </div>
+
+            <h1 style="color: white; font-size: var(--text-7xl); font-weight: 900; line-height: 1.05; margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.2s both; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+                Comienza Tu<br>
+                <span style="background: linear-gradient(135deg, #34D399, #10B981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; font-weight: 900;">
+                    Futuro Financiero
+                    <span style="position: absolute; bottom: -6px; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #34D399, #10B981, #059669); border-radius: 3px; opacity: 0.8; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);"></span>
                 </span>
             </h1>
-            <p class="hero-subtitle animate-fade-in" style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); max-width: 600px; margin: 0 auto;">
-                Solicita tu afiliación a la cooperativa. Tu solicitud será revisada por nuestro equipo.
+
+            <p style="color: rgba(255, 255, 255, 0.95); font-size: var(--text-2xl); line-height: 1.7; margin-bottom: var(--space-12); max-width: 800px; margin-left: auto; margin-right: auto; animation: fadeInUp 1s ease-out 0.4s both; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); font-weight: 400;">
+                Solicita tu <strong style="color: #34D399; font-weight: 600;">afiliación</strong> a COOGUARDPENAL y accede a 
+                <strong style="color: white; font-weight: 600;">beneficios exclusivos</strong> diseñados especialmente para 
+                la Guardia Penitenciaria y Pensionados de Colombia.
             </p>
+
+            <!-- Estadísticas de confianza -->
+            <div style="display: flex; justify-content: center; gap: var(--space-12); margin-bottom: var(--space-12); animation: fadeInUp 1s ease-out 0.6s both;">
+                <div style="text-align: center;">
+                    <div style="color: #34D399; font-size: var(--text-4xl); font-weight: 900; line-height: 1;">35+</div>
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: var(--text-base); font-weight: 600;">Años de Experiencia</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="color: #FBBF24; font-size: var(--text-4xl); font-weight: 900; line-height: 1;">5K+</div>
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: var(--text-base); font-weight: 600;">Familias Beneficiadas</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="color: #60A5FA; font-size: var(--text-4xl); font-weight: 900; line-height: 1;">98%</div>
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: var(--text-base); font-weight: 600;">Satisfacción</div>
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div style="display: flex; justify-content: center; gap: var(--space-6); animation: fadeInUp 1s ease-out 0.8s both;">
+                <a href="#formulario-registro" style="background: linear-gradient(135deg, #10B981, #059669); color: white; padding: var(--space-5) var(--space-10); border-radius: var(--radius-full); text-decoration: none; font-weight: 700; font-size: var(--text-lg); display: inline-flex; align-items: center; gap: var(--space-3); transition: var(--transition-all); box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4); transform: translateY(0);">
+                    <span style="font-size: var(--text-xl);">✨</span>
+                    <span>Comenzar Registro</span>
+                </a>
+                <a href="#proceso-afiliacion" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 2px solid rgba(255, 255, 255, 0.3); color: white; padding: var(--space-5) var(--space-10); border-radius: var(--radius-full); text-decoration: none; font-weight: 700; font-size: var(--text-lg); display: inline-flex; align-items: center; gap: var(--space-3); transition: var(--transition-all);">
+                    <span style="font-size: var(--text-xl);">📋</span>
+                    <span>Proceso de Afiliación</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Formulario de Registro -->
-<section class="section">
+<!-- Proceso de Afiliación y Formulario -->
+<section id="proceso-afiliacion" style="background: var(--gray-50); padding: var(--space-20) 0;">
     <div class="container">
-        <div class="grid grid-cols-2 gap-16">
-            <!-- Información -->
+        <div class="grid grid-cols-2 gap-20">
+            <!-- Panel de Proceso de Afiliación -->
             <div>
-                <div style="background: linear-gradient(135deg, var(--guard-blue), var(--primary-900)); color: white; padding: var(--space-8); border-radius: var(--radius-2xl); margin-bottom: var(--space-8); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                    <h2 style="color: white; margin-bottom: var(--space-6); font-size: var(--text-2xl);">
+                <div style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); color: white; padding: var(--space-10); border-radius: var(--radius-3xl); margin-bottom: var(--space-10); position: relative; overflow: hidden; box-shadow: 0 25px 50px rgba(15, 23, 42, 0.3);">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; background: rgba(16, 185, 129, 0.1); border-radius: 50%;"></div>
+                    <div style="position: absolute; bottom: -20px; left: -20px; width: 80px; height: 80px; background: rgba(245, 158, 11, 0.1); border-radius: 50%;"></div>
+                    
+                    <h2 style="color: white; margin-bottom: var(--space-8); font-size: var(--text-3xl); font-weight: 800; position: relative; z-index: 2;">
                         🎯 Proceso de Afiliación
                     </h2>
-                    <div style="space-y: var(--space-4);">
-                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
-                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">1</div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="display: flex; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6); padding: var(--space-4); background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #34D399, #10B981); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; flex-shrink: 0; font-size: var(--text-lg); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);">1</div>
                             <div>
-                                <h4 style="color: white; margin-bottom: var(--space-1);">Pre-registro</h4>
-                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Completa el formulario con tus datos básicos</p>
+                                <h4 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-lg); font-weight: 700;">Pre-registro</h4>
+                                <p style="color: rgba(255,255,255,0.85); margin: 0; font-size: var(--text-base); line-height: 1.5;">Completa el formulario con tus datos básicos y documentos</p>
                             </div>
                         </div>
-                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
-                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">2</div>
+                        <div style="display: flex; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6); padding: var(--space-4); background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FBBF24, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; flex-shrink: 0; font-size: var(--text-lg); box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);">2</div>
                             <div>
-                                <h4 style="color: white; margin-bottom: var(--space-1);">Revisión</h4>
-                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Nuestro equipo verifica tu información</p>
+                                <h4 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-lg); font-weight: 700;">Revisión</h4>
+                                <p style="color: rgba(255,255,255,0.85); margin: 0; font-size: var(--text-base); line-height: 1.5;">Nuestro equipo especializado verifica tu información</p>
                             </div>
                         </div>
-                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
-                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">3</div>
+                        <div style="display: flex; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6); padding: var(--space-4); background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60A5FA, #3B82F6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; flex-shrink: 0; font-size: var(--text-lg); box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);">3</div>
                             <div>
-                                <h4 style="color: white; margin-bottom: var(--space-1);">Aprobación</h4>
-                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Recibes confirmación por email</p>
+                                <h4 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-lg); font-weight: 700;">Aprobación</h4>
+                                <p style="color: rgba(255,255,255,0.85); margin: 0; font-size: var(--text-base); line-height: 1.5;">Recibes confirmación por email con tus credenciales</p>
                             </div>
                         </div>
-                        <div style="display: flex; align-items: start; gap: var(--space-3);">
-                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">4</div>
+                        <div style="display: flex; align-items: start; gap: var(--space-4); padding: var(--space-4); background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-xl); backdrop-filter: blur(10px);">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #A78BFA, #8B5CF6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; flex-shrink: 0; font-size: var(--text-lg); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);">4</div>
                             <div>
-                                <h4 style="color: white; margin-bottom: var(--space-1);">¡Bienvenido!</h4>
-                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Acceso completo al portal y beneficios</p>
+                                <h4 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-lg); font-weight: 700;">¡Bienvenido!</h4>
+                                <p style="color: rgba(255,255,255,0.85); margin: 0; font-size: var(--text-base); line-height: 1.5;">Acceso completo al portal y todos los beneficios</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div style="background: var(--primary-50); padding: var(--space-6); border-radius: var(--radius-xl); border-left: 4px solid var(--success);">
-                    <h3 style="color: var(--primary-900); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
-                        ℹ️ Requisitos Básicos
+                <div style="background: white; padding: var(--space-8); border-radius: var(--radius-2xl); border: 1px solid var(--gray-200); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
+                    <h3 style="color: var(--primary-900); margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-xl); font-weight: 700;">
+                        <span style="color: #10B981; font-size: var(--text-2xl);">📋</span>
+                        Requisitos Básicos
                     </h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: var(--gray-700);">
-                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);">
-                            <span style="color: var(--success);">✅</span>
-                            <span>Ser miembro activo o pensionado del sistema penitenciario</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);">
-                            <span style="color: var(--success);">✅</span>
-                            <span>Tener cédula de ciudadanía vigente</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-2);">
-                            <span style="color: var(--success);">✅</span>
-                            <span>Proporcionar información de contacto actualizada</span>
-                        </li>
-                    </ul>
+                    <div style="space-y: var(--space-4);">
+                        <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">✅</div>
+                            <span style="color: var(--primary-900); font-weight: 500; font-size: var(--text-base);">Ser miembro activo o pensionado del sistema penitenciario</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg); margin-top: var(--space-3);">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">✅</div>
+                            <span style="color: var(--primary-900); font-weight: 500; font-size: var(--text-base);">Tener cédula de ciudadanía vigente</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg); margin-top: var(--space-3);">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">✅</div>
+                            <span style="color: var(--primary-900); font-weight: 500; font-size: var(--text-base);">Proporcionar información de contacto actualizada</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Formulario -->
-            <div>
-                <div style="background: linear-gradient(135deg, var(--warning), #EAB308); padding: var(--space-2); border-radius: var(--radius-2xl); margin-bottom: var(--space-6);">
-                    <h2 style="color: var(--primary-900); margin: 0; padding: var(--space-4); text-align: center; font-size: var(--text-2xl); font-weight: 700;">
-                        📝 Formulario de Pre-registro
-                    </h2>
+            <!-- Formulario Espectacular -->
+            <div id="formulario-registro">
+                <!-- Header del formulario -->
+                <div style="background: white; padding: var(--space-8); border-radius: var(--radius-3xl) var(--radius-3xl) var(--radius-lg) var(--radius-lg); border: 1px solid var(--gray-200); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); margin-bottom: var(--space-2);">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto var(--space-4); background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3); position: relative;">
+                            📝
+                            <div style="position: absolute; inset: -3px; border: 2px solid rgba(16, 185, 129, 0.3); border-radius: 50%; animation: pulse 2s infinite;"></div>
+                        </div>
+                        <h2 style="color: var(--primary-900); margin: 0; font-size: var(--text-2xl); font-weight: 800;">
+                            Formulario de Pre-registro
+                        </h2>
+                        <p style="color: var(--gray-600); margin-top: var(--space-2); font-size: var(--text-base);">
+                            Completa tus datos para comenzar el proceso de afiliación
+                        </p>
+                    </div>
                 </div>
 
+                <!-- Messages -->
                 {% if messages %}
                     {% for message in messages %}
-                        <div style="background: {% if message.tags == 'success' %}var(--success){% elif message.tags == 'error' %}var(--error){% else %}var(--warning){% endif %}; color: white; padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                        <div style="background: {% if message.tags == 'success' %}linear-gradient(135deg, #10B981, #059669){% elif message.tags == 'error' %}linear-gradient(135deg, #DC2626, #B91C1C){% elif message.tags == 'warning' %}linear-gradient(135deg, #F59E0B, #D97706){% else %}linear-gradient(135deg, #3B82F6, #1D4ED8){% endif %}; color: white; padding: var(--space-5); border-radius: var(--radius-xl); margin-bottom: var(--space-4); text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
                             {{ message }}
                         </div>
                     {% endfor %}
                 {% endif %}
 
-                <form method="post" class="card" style="background: white; padding: var(--space-8); border: 2px solid var(--guard-blue);">
+                <!-- Formulario principal -->
+                <form method="post" style="background: white; padding: var(--space-10); border-radius: var(--radius-lg) var(--radius-lg) var(--radius-3xl) var(--radius-3xl); border: 1px solid var(--gray-200); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);">
                     {% csrf_token %}
                     
                     <div style="margin-bottom: var(--space-6);">
@@ -198,14 +260,16 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; background: linear-gradient(135deg, var(--guard-blue), var(--primary-900)); border: none; font-weight: 700; font-size: var(--text-lg);">
-                        ✨ Enviar Pre-registro
+                    <button type="submit" style="width: 100%; background: linear-gradient(135deg, #10B981, #059669); color: white; border: none; padding: var(--space-5) var(--space-8); border-radius: var(--radius-xl); font-weight: 700; font-size: var(--text-lg); cursor: pointer; transition: var(--transition-all); box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; gap: var(--space-3); margin-bottom: var(--space-8);">
+                        <span style="font-size: var(--text-xl);">🚀</span>
+                        <span style="color: white; font-weight: 700;">Enviar Pre-registro</span>
                     </button>
 
-                    <div style="text-align: center; margin-top: var(--space-6);">
-                        <p style="color: var(--gray-600); margin-bottom: var(--space-2);">¿Ya tienes cuenta?</p>
-                        <a href="{% url 'accounts:login' %}" style="color: var(--guard-blue); font-weight: 600; text-decoration: none;">
-                            🔐 Inicia sesión aquí
+                    <div style="text-align: center; padding-top: var(--space-4); border-top: 1px solid var(--gray-200);">
+                        <p style="color: var(--gray-600); margin-bottom: var(--space-4); font-size: var(--text-sm);">¿Ya tienes cuenta?</p>
+                        <a href="{% url 'accounts:login' %}" style="color: #10B981; font-weight: 600; text-decoration: none; font-size: var(--text-base); display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                            <span>🔐</span>
+                            <span>Inicia Sesión Aquí</span>
                         </a>
                     </div>
                 </form>
@@ -215,21 +279,61 @@
 </section>
 
 <style>
+/* Estilos para campos de formulario del registro */
 .form-control {
     width: 100%;
-    padding: var(--space-3);
+    padding: var(--space-4);
     border: 2px solid var(--gray-200);
     border-radius: var(--radius-lg);
     font-size: var(--text-base);
     transition: var(--transition-all);
     font-family: var(--font-sans);
+    color: var(--primary-900);
+    font-weight: 500;
+    background: white;
 }
 
 .form-control:focus {
     outline: none;
-    border-color: var(--guard-blue);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #10B981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
     transform: translateY(-1px);
+}
+
+.form-control::placeholder {
+    color: var(--gray-500);
+}
+
+/* Hover effects para botón de registro */
+button[type="submit"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4) !important;
+}
+
+button[type="submit"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Link de login hover */
+a[href*="login"]:hover {
+    color: #059669 !important;
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hero-register {
+        min-height: 60vh !important;
+        padding: var(--space-8) 0 !important;
+    }
+    
+    .gap-20 {
+        gap: var(--space-8) !important;
+    }
 }
 </style>
 {% endblock %}

@@ -2,121 +2,209 @@
 {% block title %}Iniciar Sesión - COOGUARDPENAL Ltda.{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero section-sm" style="background: linear-gradient(135deg, var(--guard-navy), var(--info)); position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.6;"></div>
+<!-- Hero Section Login Espectacular -->
+<section class="hero-login" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden; min-height: 75vh; display: flex; align-items: center; margin-top: var(--space-8); margin-bottom: var(--space-16); padding: var(--space-16) 0;">
+    <!-- Patrón de fondo de autenticación -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 30% 40%, rgba(245, 158, 11, 0.08) 2px, transparent 2px), radial-gradient(circle at 70% 60%, rgba(16, 185, 129, 0.06) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.7;"></div>
+    
+    <!-- Decoraciones de seguridad flotantes -->
+    <div style="position: absolute; top: 15%; left: 10%; width: 90px; height: 90px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; animation: float 6s ease-in-out infinite;">🔐</div>
+    <div style="position: absolute; top: 20%; right: 12%; width: 75px; height: 75px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.9rem; animation: float 8s ease-in-out infinite reverse; transform: rotate(15deg);">🛡️</div>
+    <div style="position: absolute; bottom: 25%; left: 15%; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; animation: float 5s ease-in-out infinite; transform: rotate(-10deg);">🔑</div>
+    <div style="position: absolute; bottom: 20%; right: 8%; width: 85px; height: 85px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; animation: float 7s ease-in-out infinite reverse;">🚀</div>
+
     <div class="container" style="position: relative; z-index: 2;">
-        <div class="hero-content text-center">
-            <h1 class="hero-title animate-fade-in-down" style="color: white; font-size: var(--text-4xl); margin-bottom: var(--space-6);">
-                🔐 Iniciar Sesión<br>
-                <span style="background: linear-gradient(135deg, var(--warning), #EAB308); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    COOGUARDPENAL
-                </span>
-            </h1>
-            <p class="hero-subtitle animate-fade-in" style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); max-width: 600px; margin: 0 auto;">
-                Accede a tu cuenta para disfrutar de todos los beneficios de la cooperativa.
-            </p>
+        <div class="grid grid-cols-2 gap-20 items-center">
+            <!-- Contenido Informativo (Izquierda) -->
+            <div class="login-info-panel">
+                <!-- Badge superior de acceso -->
+                <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); backdrop-filter: blur(10px); border: 1px solid rgba(245, 158, 11, 0.3); padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); animation: fadeInDown 1s ease-out;">
+                    <span style="color: #FBBF24; font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 1px;">
+                        🏆 Portal Exclusivo • Acceso Seguro
+                    </span>
+                </div>
+
+                <h1 style="color: white; font-size: var(--text-6xl); font-weight: 900; line-height: 1.05; margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.2s both; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+                    Bienvenido<br>
+                    <span style="background: linear-gradient(135deg, #FCD34D, #FBBF24, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; font-weight: 900;">
+                        de Vuelta
+                        <span style="position: absolute; bottom: -6px; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #FCD34D, #FBBF24, #F59E0B); border-radius: 3px; opacity: 0.8; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);"></span>
+                    </span>
+                </h1>
+
+                <p style="color: rgba(255, 255, 255, 0.95); font-size: var(--text-xl); line-height: 1.7; margin-bottom: var(--space-10); animation: fadeInUp 1s ease-out 0.4s both; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); font-weight: 400;">
+                    Accede a tu <strong style="color: #FCD34D; font-weight: 600;">portal personalizado</strong> y gestiona todos tus 
+                    beneficios, créditos y servicios cooperativos. <strong style="color: white; font-weight: 600;">Tu tranquilidad financiera</strong> 
+                    está a un clic de distancia.
+                </p>
+
+                <!-- Beneficios de acceso -->
+                <div style="animation: fadeInUp 1s ease-out 0.6s both;">
+                    <h3 style="color: white; font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-4);">
+                        ✨ Al acceder tendrás:
+                    </h3>
+                    <div style="space-y: var(--space-3);">
+                        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">💰</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-base);">Gestión de créditos y solicitudes</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #3B82F6, #1D4ED8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">📊</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-base);">Estados de cuenta y movimientos</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">🎯</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-base);">Beneficios y ofertas exclusivas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Login (Derecha) -->
+            <div class="login-form-panel" style="animation: fadeInRight 1s ease-out 0.5s both;">
+                <!-- Marco principal del formulario -->
+                <div style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-3xl); padding: var(--space-10); position: relative; overflow: hidden;">
+                    <!-- Brillo superior -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.7), transparent);"></div>
+                    
+                    <!-- Header del formulario -->
+                    <div style="text-align: center; margin-bottom: var(--space-8);">
+                        <div style="width: 80px; height: 80px; margin: 0 auto var(--space-4); background: linear-gradient(135deg, #FBBF24, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 15px 30px rgba(245, 158, 11, 0.3); position: relative;">
+                            🔐
+                            <div style="position: absolute; inset: -3px; border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 50%; animation: pulse 2s infinite;"></div>
+                        </div>
+                        
+                        <h2 style="color: white; font-size: var(--text-2xl); font-weight: 800; margin-bottom: var(--space-2);">
+                            Iniciar Sesión
+                        </h2>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-base);">
+                            Accede a tu portal personalizado
+                        </p>
+                    </div>
+
+                    <!-- Messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div style="background: {% if message.tags == 'success' %}linear-gradient(135deg, #10B981, #059669){% elif message.tags == 'error' %}linear-gradient(135deg, #DC2626, #B91C1C){% elif message.tags == 'warning' %}linear-gradient(135deg, #F59E0B, #D97706){% else %}linear-gradient(135deg, #3B82F6, #1D4ED8){% endif %}; color: white; padding: var(--space-4); border-radius: var(--radius-xl); margin-bottom: var(--space-6); text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <!-- Formulario -->
+                    <form method="post" style="space-y: var(--space-6);">
+                        {% csrf_token %}
+                        
+                        <!-- Email Field -->
+                        <div style="margin-bottom: var(--space-6);">
+                            <label style="display: block; margin-bottom: var(--space-3); font-weight: 600; color: rgba(255, 255, 255, 0.9); font-size: var(--text-base); display: flex; align-items: center; gap: var(--space-2);">
+                                <span style="color: #FBBF24;">📧</span>
+                                Correo Electrónico
+                            </label>
+                            <div style="position: relative;">
+                                {{ form.email }}
+                                <div style="position: absolute; left: var(--space-4); top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.5); pointer-events: none;">@</div>
+                            </div>
+                            {% if form.email.errors %}
+                                <div style="color: #F87171; font-size: var(--text-sm); margin-top: var(--space-2); display: flex; align-items: center; gap: var(--space-1);">
+                                    <span>⚠️</span>
+                                    {{ form.email.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Password Field -->
+                        <div style="margin-bottom: var(--space-8);">
+                            <label style="display: block; margin-bottom: var(--space-3); font-weight: 600; color: rgba(255, 255, 255, 0.9); font-size: var(--text-base); display: flex; align-items: center; gap: var(--space-2);">
+                                <span style="color: #FBBF24;">🔐</span>
+                                Contraseña
+                            </label>
+                            <div style="position: relative;">
+                                {{ form.password }}
+                                <div style="position: absolute; left: var(--space-4); top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.5); pointer-events: none;">🔒</div>
+                            </div>
+                            {% if form.password.errors %}
+                                <div style="color: #F87171; font-size: var(--text-sm); margin-top: var(--space-2); display: flex; align-items: center; gap: var(--space-1);">
+                                    <span>⚠️</span>
+                                    {{ form.password.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" style="width: 100%; background: linear-gradient(135deg, #FBBF24, #F59E0B); color: white; border: none; padding: var(--space-5); border-radius: var(--radius-xl); font-weight: 700; font-size: var(--text-lg); cursor: pointer; transition: var(--transition-all); box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3); display: flex; align-items: center; justify-content: center; gap: var(--space-2); margin-bottom: var(--space-6);">
+                            <span style="font-size: var(--text-xl);">🚀</span>
+                            <span>Ingresar al Portal</span>
+                        </button>
+
+                        <!-- Links adicionales -->
+                        <div style="text-align: center; padding-top: var(--space-4); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: var(--space-4); font-size: var(--text-sm);">¿No tienes cuenta?</p>
+                            <a href="{% url 'accounts:register' %}" style="color: #FBBF24; font-weight: 600; text-decoration: none; font-size: var(--text-base); display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                                <span>✨</span>
+                                <span>Registrarse Ahora</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Formulario de Login -->
-<section class="section">
+<!-- Información de Estados y Ayuda -->
+<section style="background: var(--gray-50); padding: var(--space-16) 0;">
     <div class="container">
-        <div style="max-width: 500px; margin: 0 auto;">
-            
-            {% if messages %}
-                {% for message in messages %}
-                    <div style="background: {% if message.tags == 'success' %}var(--success){% elif message.tags == 'error' %}var(--error){% elif message.tags == 'warning' %}var(--warning){% else %}var(--info){% endif %}; color: white; padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-6); text-align: center;">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
-
-            <div style="background: linear-gradient(135deg, var(--warning), #EAB308); padding: var(--space-2); border-radius: var(--radius-2xl); margin-bottom: var(--space-8);">
-                <h2 style="color: var(--guard-navy); margin: 0; padding: var(--space-6); text-align: center; font-size: var(--text-2xl); font-weight: 700;">
-                    🚀 Acceso al Portal
-                </h2>
-            </div>
-
-            <form method="post" class="card" style="background: white; padding: var(--space-10); border: 2px solid var(--info); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);">
-                {% csrf_token %}
-                
-                <div style="margin-bottom: var(--space-8);">
-                    <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--guard-navy); font-size: var(--text-lg);">
-                        📧 Correo Electrónico
-                    </label>
-                    {{ form.email }}
-                    {% if form.email.errors %}
-                        <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-2);">
-                            {{ form.email.errors.0 }}
-                        </div>
-                    {% endif %}
-                </div>
-
-                <div style="margin-bottom: var(--space-10);">
-                    <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--guard-navy); font-size: var(--text-lg);">
-                        🔐 Contraseña
-                    </label>
-                    {{ form.password }}
-                    {% if form.password.errors %}
-                        <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-2);">
-                            {{ form.password.errors.0 }}
-                        </div>
-                    {% endif %}
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; background: linear-gradient(135deg, var(--info), var(--guard-navy)); border: none; font-weight: 700; font-size: var(--text-xl); padding: var(--space-4);">
-                    🚀 Ingresar al Portal
-                </button>
-
-                <div style="text-align: center; margin-top: var(--space-8);">
-                    <p style="color: var(--gray-600); margin-bottom: var(--space-4);">¿No tienes cuenta?</p>
-                    <a href="{% url 'accounts:register' %}" class="btn btn-outline btn-lg" style="border-color: var(--warning); color: var(--warning); font-weight: 700; padding: var(--space-3) var(--space-6);">
-                        ✨ Registrarse Ahora
-                    </a>
-                </div>
-            </form>
-
+        <div class="grid grid-cols-2 gap-16">
             <!-- Estados de Cuenta -->
-            <div style="background: var(--guard-silver); padding: var(--space-6); border-radius: var(--radius-xl); margin-top: var(--space-8); border-left: 4px solid var(--info);">
-                <h3 style="color: var(--guard-navy); margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);">
-                    ℹ️ Estados de Cuenta
+            <div style="background: white; padding: var(--space-8); border-radius: var(--radius-2xl); border: 1px solid var(--gray-200); box-shadow: var(--shadow-lg);">
+                <h3 style="color: var(--primary-900); margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-xl); font-weight: 700;">
+                    <span style="color: #3B82F6; font-size: var(--text-2xl);">ℹ️</span>
+                    Estados de Cuenta
                 </h3>
-                <div style="display: grid; gap: var(--space-3);">
-                    <div style="display: flex; align-items: center; gap: var(--space-3);">
-                        <span style="color: var(--success); font-size: var(--text-xl);">✅</span>
+                <div style="space-y: var(--space-4);">
+                    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg);">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">✅</div>
                         <div>
-                            <div style="font-weight: 600; color: var(--guard-navy);">Cuenta Activa</div>
+                            <div style="font-weight: 600; color: var(--primary-900); margin-bottom: var(--space-1);">Cuenta Activa</div>
                             <div style="font-size: var(--text-sm); color: var(--gray-600);">Acceso completo al portal y beneficios</div>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: var(--space-3);">
-                        <span style="color: var(--warning); font-size: var(--text-xl);">⏳</span>
+                    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg);">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #F59E0B, #D97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">⏳</div>
                         <div>
-                            <div style="font-weight: 600; color: var(--guard-navy);">Pendiente de Aprobación</div>
+                            <div style="font-weight: 600; color: var(--primary-900); margin-bottom: var(--space-1);">Pendiente de Aprobación</div>
                             <div style="font-size: var(--text-sm); color: var(--gray-600);">Tu solicitud está siendo revisada</div>
                         </div>
                     </div>
-                    <div style="display: flex; align-items: center; gap: var(--space-3);">
-                        <span style="color: var(--error); font-size: var(--text-xl);">⚠️</span>
+                    <div style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--gray-50); border-radius: var(--radius-lg);">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #DC2626, #B91C1C); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-lg);">⚠️</div>
                         <div>
-                            <div style="font-weight: 600; color: var(--guard-navy);">Cuenta Suspendida</div>
+                            <div style="font-weight: 600; color: var(--primary-900); margin-bottom: var(--space-1);">Cuenta Suspendida</div>
                             <div style="font-size: var(--text-sm); color: var(--gray-600);">Contacta al administrador</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Contacto -->
-            <div style="text-align: center; margin-top: var(--space-8);">
-                <p style="color: var(--gray-600); margin-bottom: var(--space-4);">¿Problemas para acceder?</p>
-                <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
-                    <a href="/contacto/" style="color: var(--info); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: var(--space-1);">
-                        📞 Contáctanos
+            <!-- Ayuda y Contacto -->
+            <div style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); color: white; padding: var(--space-8); border-radius: var(--radius-2xl); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(245, 158, 11, 0.1); border-radius: 50%;"></div>
+                <h3 style="color: white; margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-xl); font-weight: 700; position: relative; z-index: 2;">
+                    <span style="color: #FBBF24; font-size: var(--text-2xl);">💬</span>
+                    ¿Necesitas Ayuda?
+                </h3>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: var(--space-6); position: relative; z-index: 2;">
+                    Nuestro equipo está disponible para ayudarte con cualquier problema de acceso o dudas sobre tu cuenta.
+                </p>
+                <div style="display: flex; gap: var(--space-4); position: relative; z-index: 2;">
+                    <a href="/contacto/" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-xl); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                        <span>📞</span>
+                        <span>Contáctanos</span>
                     </a>
-                    <a href="https://wa.me/573362834" target="_blank" style="color: var(--success); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: var(--space-1);">
-                        💬 WhatsApp
+                    <a href="https://wa.me/573362834" target="_blank" style="background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-xl); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: var(--space-2); transition: var(--transition-all); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                        <span>💬</span>
+                        <span>WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -125,23 +213,53 @@
 </section>
 
 <style>
+/* Estilos para campos de formulario del login */
 .form-control {
     width: 100%;
-    padding: var(--space-4);
-    border: 3px solid var(--gray-200);
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-12);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-xl);
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     transition: var(--transition-all);
     font-family: var(--font-sans);
-    background: var(--gray-25);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 500;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control:focus {
     outline: none;
-    border-color: var(--info);
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Hover effects para botones */
+button[type="submit"]:hover {
     transform: translateY(-2px);
-    background: white;
+    box-shadow: 0 12px 35px rgba(245, 158, 11, 0.4) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hero-login {
+        min-height: 60vh !important;
+        padding: var(--space-8) 0 !important;
+    }
+    
+    .gap-20 {
+        gap: var(--space-8) !important;
+    }
 }
 </style>
 {% endblock %}

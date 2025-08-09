@@ -1608,19 +1608,60 @@
             transform: translateY(-2px) scale(1.05);
         }
 
-        /* WhatsApp Button */
+        /* WhatsApp Button Premium */
         .whatsapp-btn {
-            background: linear-gradient(135deg, #25D366, #20BA5A);
-            animation: pulse-whatsapp 2s infinite;
+            background: linear-gradient(135deg, #25D366, #20BA5A, #1DA851);
+            background-size: 200% 200%;
+            animation: pulse-whatsapp 2s infinite, gradient-shift 3s ease-in-out infinite;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .whatsapp-btn:hover::before {
+            left: 100%;
         }
 
         .whatsapp-btn:hover {
-            background: linear-gradient(135deg, #20BA5A, #1DA851);
+            background: linear-gradient(135deg, #20BA5A, #1DA851, #128C7E);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-btn svg {
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-btn:hover svg {
+            transform: scale(1.1) rotate(5deg);
         }
 
         @keyframes pulse-whatsapp {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            0%, 100% { 
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.4); 
+            }
+            50% { 
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4), 0 0 0 15px rgba(37, 211, 102, 0); 
+            }
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         /* Chat AI Button */
@@ -3480,7 +3521,9 @@
     <!-- Floating Buttons -->
     <div class="floating-buttons">
         <a href="https://wa.me/573362834" class="float-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-            💬
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.491 3.085" fill="white"/>
+            </svg>
         </a>
         <button class="float-btn chat-btn" id="chat-toggle" aria-label="Abrir chat virtual">
             🤖
@@ -3595,7 +3638,9 @@
                 '/servicios/': 'servicios', 
                 '/nosotros/': 'nosotros',
                 '/noticias/': 'noticias',
-                '/contacto/': 'contacto'
+                '/contacto/': 'contacto',
+                '/accounts/login/': 'ingresar',
+                '/accounts/register/': 'registrarse'
             };
             
             // Función para activar link basado en texto
@@ -3622,6 +3667,13 @@
                     activateNavByText('noticias');
                 } else if (currentPath.includes('/contacto')) {
                     activateNavByText('contacto');
+                } else if (currentPath.includes('/accounts/login')) {
+                    activateNavByText('ingresar');
+                } else if (currentPath.includes('/accounts/register')) {
+                    activateNavByText('registrarse');
+                } else if (currentPath.includes('/accounts')) {
+                    // Para cualquier otra página de accounts, activamos ingresar por defecto
+                    activateNavByText('ingresar');
                 } else {
                     // Por defecto activamos inicio
                     activateNavByText('inicio');
@@ -3735,18 +3787,18 @@
             addMessage(message, 'user');
             chatInput.value = '';
             
+            // Update character counter
+            const charCounter = document.getElementById('char-counter');
+            if (charCounter) {
+                charCounter.textContent = '0/500';
+                charCounter.style.color = 'var(--primary-400)';
+            }
+            
             // Show typing indicator
             showTyping();
             
-            // Simulate AI response
-            setTimeout(() => {
-                hideTyping();
-                handleAIResponse(message);
-                
-                // Re-enable send button
-                chatSend.disabled = false;
-                chatSend.innerHTML = '<span>📤</span>';
-            }, 1500 + Math.random() * 1000);
+            // Send to N8N and handle real-time response
+            sendToN8N(message);
         }
         
         function addMessage(content, sender) {
@@ -3829,123 +3881,208 @@
             sendMessage();
         }
         
-        function handleAIResponse(userMessage) {
+        // Sistema de Chat N8N en Tiempo Real
+        let chatSessionId = null;
+        let isWaitingForResponse = false;
+        
+        function initializeChatSession() {
+            if (!chatSessionId) {
+                chatSessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                console.log('🚀 Chat session initialized:', chatSessionId);
+            }
+            return chatSessionId;
+        }
+        
+        async function sendToN8N(userMessage) {
+            const sessionId = initializeChatSession();
+            isWaitingForResponse = true;
+            
+            // URL del webhook de N8N (reemplaza con tu URL real)
+            const n8nWebhookURL = 'https://your-n8n-instance.com/webhook/cooguardpenal-chat';
+            
+            const messageData = {
+                user_input: userMessage,
+                session_id: sessionId,
+                timestamp: new Date().toISOString(),
+                page_url: window.location.href,
+                user_agent: navigator.userAgent,
+                conversation_id: generateConversationId()
+            };
+            
+            try {
+                console.log('📤 Sending to N8N:', messageData);
+                
+                const response = await fetch(n8nWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(messageData)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log('✅ N8N Response:', result);
+                    
+                    // Si N8N devuelve respuesta inmediata
+                    if (result.response) {
+                        handleN8NResponse(result.response);
+                    } else {
+                        // Iniciar polling para respuesta asíncrona
+                        startPollingForResponse(sessionId, messageData.conversation_id);
+                    }
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+            } catch (error) {
+                console.error('❌ Error sending to N8N:', error);
+                handleN8NError(error, userMessage);
+            }
+        }
+        
+        function handleN8NResponse(responseText) {
+            hideTyping();
+            isWaitingForResponse = false;
+            
+            // Formatear respuesta del agente
+            const formattedResponse = formatAgentResponse(responseText);
+            addMessage(formattedResponse, 'bot');
+            
+            // Re-enable send button
+            chatSend.disabled = false;
+            chatSend.innerHTML = '<span>📤</span>';
+            
+            console.log('🤖 Agent response displayed');
+        }
+        
+        function handleN8NError(error, originalMessage) {
+            hideTyping();
+            isWaitingForResponse = false;
+            
+            console.error('Chat error:', error);
+            
+            // Fallback a respuesta local más inteligente
+            const fallbackResponse = generateFallbackResponse(originalMessage);
+            addMessage(fallbackResponse, 'bot');
+            
+            // Re-enable send button
+            chatSend.disabled = false;
+            chatSend.innerHTML = '<span>📤</span>';
+        }
+        
+        function startPollingForResponse(sessionId, conversationId) {
+            const pollEndpoint = '/api/chat/poll-response/';
+            let pollAttempts = 0;
+            const maxPollAttempts = 30; // 30 intentos = 30 segundos máximo
+            
+            console.log('🔄 Starting polling for response...', { sessionId, conversationId });
+            
+            const pollInterval = setInterval(async () => {
+                try {
+                    pollAttempts++;
+                    console.log(`📊 Poll attempt ${pollAttempts}/${maxPollAttempts}`);
+                    
+                    const response = await fetch(pollEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': getCsrfToken()
+                        },
+                        body: JSON.stringify({
+                            session_id: sessionId,
+                            conversation_id: conversationId
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log('📨 Poll response:', data);
+                        
+                        if (data.has_response) {
+                            clearInterval(pollInterval);
+                            console.log('✅ Response received via polling!');
+                            handleN8NResponse(data.response);
+                            return;
+                        }
+                    } else {
+                        console.warn(`⚠️ Poll response ${response.status}: ${response.statusText}`);
+                    }
+                    
+                    // Timeout después de maxPollAttempts
+                    if (pollAttempts >= maxPollAttempts) {
+                        clearInterval(pollInterval);
+                        console.error('⏰ Timeout waiting for N8N response');
+                        throw new Error('Timeout waiting for N8N response');
+                    }
+                    
+                } catch (error) {
+                    clearInterval(pollInterval);
+                    console.error('❌ Polling error:', error);
+                    handleN8NError(error, 'Polling failed');
+                }
+            }, 1000); // Poll cada segundo
+        }
+        
+        function formatAgentResponse(responseText) {
+            // Formatear la respuesta del agente N8N
+            if (!responseText) return '🤖 No he recibido una respuesta válida.';
+            
+            // Agregar emoji de agente si no lo tiene
+            if (!responseText.includes('🤖') && !responseText.includes('🎯')) {
+                responseText = '🤖 ' + responseText;
+            }
+            
+            return responseText;
+        }
+        
+        function generateFallbackResponse(userMessage) {
             const message = userMessage.toLowerCase();
-            let response = '';
             
             if (message.includes('afili') || message.includes('ingres') || message.includes('asociar')) {
-                response = `¡Excelente! 🎯 Para afiliarte a COOGUARDPENAL necesitas:
+                return `🤖 ¡Excelente! Para afiliarte a COOGUARDPENAL necesitas:
                 
                 ✅ Ser miembro activo o pensionado del sistema penitenciario
                 ✅ Cédula de ciudadanía
                 ✅ Certificado laboral vigente
                 ✅ Últimos 3 desprendibles de pago
                 
-                📞 Llámanos al (601) 3362834 o visítanos en la Carrera 5 #16-14 Of. 402
-                
-                ¿Te gustaría que te contacte un asesor?`;
+                📞 Llámanos al (601) 3362834`;
                 
             } else if (message.includes('credit') || message.includes('préstam') || message.includes('dinero')) {
-                response = `💰 ¡Tenemos excelentes opciones de crédito!
+                return `🤖 ¡Tenemos excelentes opciones de crédito!
                 
                 🎓 **Créditos Educativos**: 0.8% mensual
-                • Aprobación inmediata
-                • Sin codeudor
-                • Hasta 60 meses
-                
                 💳 **Créditos Personales**: 1.2% mensual  
-                • Hasta $20.000.000
-                • Evaluación rápida
-                • Descuento por nómina
                 
-                ¿Cuál te interesa más?`;
-                
-            } else if (message.includes('auxilio') || message.includes('beneficio') || message.includes('ayuda')) {
-                response = `🤝 Nuestros auxilios incluyen:
-                
-                ⚖️ **Auxilios Jurídicos**: Asesoría legal 24/7
-                🛡️ **Auxilios Solidarios**: Por fallecimiento, incapacidad
-                👶 **Auxilios Especiales**: Maternidad, paternidad
-                💼 **Auxilio Funerario**: Cobertura completa
-                
-                Todos incluidos en tu afiliación. ¿Necesitas información específica?`;
-                
-            } else if (message.includes('horario') || message.includes('atención') || message.includes('ubicación')) {
-                response = `🏢 **Información de contacto:**
-                
-                📍 **Ubicación**: Carrera 5 #16-14 Of. 402, Edificio El Globo, Bogotá
-                🕒 **Horarios**: Lunes a Viernes, 8:00 AM - 5:00 PM
-                📞 **Teléfonos**: (601) 3362834 / 3362835
-                ✉️ **Email**: cooguarpenal78@gmail.com
-                
-                ¿Prefieres que te llamemos o visitarnos?`;
-                
-            } else if (message.includes('tasa') || message.includes('interés') || message.includes('costo')) {
-                response = `📊 **Nuestras tasas súper competitivas:**
-                
-                🎓 **Créditos Educativos**: 0.8% mensual
-                💰 **Créditos Personales**: 1.2% mensual
-                🏦 **Ahorros**: Hasta 8% EA
-                
-                ¡Las mejores del mercado! ¿Te interesa simular un crédito?`;
-                
-            } else if (message.includes('contacto') || message.includes('asesor') || message.includes('hablar')) {
-                response = `📞 ¡Perfecto! Te conectamos con un asesor:
-                
-                🚀 **Opciones de contacto inmediato:**
-                • WhatsApp: Click en el botón verde 💬
-                • Llamada directa: (601) 3362834
-                • Formulario: Sección "Contacto"
-                
-                💡 **Tip**: Por WhatsApp obtienes respuesta más rápida
-                
-                ¿Cuál prefieres?`;
+                📞 Contacta un asesor: (601) 3362834`;
                 
             } else {
-                response = `Entiendo que necesitas información sobre "${userMessage}". 
+                return `🤖 Disculpa, estoy experimentando dificultades técnicas temporales.
                 
-                🎯 Te recomiendo contactar directamente a nuestros asesores especializados:
+                📞 Para atención inmediata:
+                • WhatsApp: Click en el botón verde 💬
+                • Teléfono: (601) 3362834
+                • Email: cooguarpenal78@gmail.com
                 
-                📱 **WhatsApp**: Respuesta inmediata
-                📞 **Llamada**: (601) 3362834
-                ✉️ **Email**: cooguarpenal78@gmail.com
-                
-                O pregúntame sobre:
-                • Afiliaciones • Créditos • Auxilios • Horarios`;
+                ¿Podrías intentar de nuevo en un momento?`;
             }
-            
-            addMessage(response, 'bot');
-            
-            // Send to N8N webhook (placeholder - replace with real endpoint)
-            sendToN8N(userMessage, response);
         }
         
-        function sendToN8N(userMessage, botResponse) {
-            // Placeholder for N8N integration
-            const webhookURL = 'https://your-n8n-instance.com/webhook/chat-cooguardpenal';
-            
-            const payload = {
-                timestamp: new Date().toISOString(),
-                user_message: userMessage,
-                bot_response: botResponse,
-                session_id: 'session_' + Date.now(),
-                user_agent: navigator.userAgent
-            };
-            
-            // Uncomment when you have a real N8N webhook
-            /*
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload)
-            }).catch(error => {
-                console.log('N8N webhook not configured yet:', error);
-            });
-            */
-            
-            console.log('Chat data for N8N:', payload);
+        function generateConversationId() {
+            return 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+        }
+        
+        function getCsrfToken() {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === 'csrftoken') {
+                    return value;
+                }
+            }
+            return '';
         }
         
         // Close chat when clicking outside
