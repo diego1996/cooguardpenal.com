@@ -1,0 +1,399 @@
+{% extends 'website/base.html' %}
+{% block title %}Contacto - COOGUARDPENAL Ltda.{% endblock %}
+
+{% block content %}
+<!-- Hero Section Espectacular -->
+<section class="hero section-sm" style="background: linear-gradient(135deg, var(--primary-900), var(--primary-700)); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.4;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero-content text-center">
+            <h1 class="hero-title animate-fade-in-down" style="color: white; font-size: var(--text-5xl); margin-bottom: var(--space-6);">
+                💬 Hablemos <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Hoy</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in" style="color: rgba(255,255,255,0.9); font-size: var(--text-xl); max-width: 600px; margin: 0 auto;">
+                Tu próximo beneficio está a solo un mensaje de distancia. Estamos aquí para ayudarte.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contacto Rápido Superior -->
+<section style="background: white; padding: var(--space-8) 0; box-shadow: var(--shadow-lg); position: relative; z-index: 10; margin-top: -30px; border-radius: var(--radius-3xl) var(--radius-3xl) 0 0;">
+    <div class="container">
+        <div class="grid grid-cols-3 gap-6 text-center">
+            <a href="https://wa.me/573362834" target="_blank" class="card contact-card-whatsapp" style="background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: var(--space-8); text-decoration: none; transform: translateY(0); transition: var(--transition-all); border: none;">
+                <div style="font-size: var(--text-4xl); margin-bottom: var(--space-4);">📱</div>
+                <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">WhatsApp</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: var(--text-sm);">Respuesta inmediata</p>
+            </a>
+            
+            <a href="tel:+5713362834" class="card contact-card-phone" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); color: white; padding: var(--space-8); text-decoration: none; transform: translateY(0); transition: var(--transition-all); border: none;">
+                <div style="font-size: var(--text-4xl); margin-bottom: var(--space-4);">📞</div>
+                <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Llamada</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: var(--text-sm);">Atención personalizada</p>
+            </a>
+            
+            <div class="card contact-card-form" style="background: linear-gradient(135deg, var(--accent-600), var(--accent-500)); color: white; padding: var(--space-8); cursor: pointer;" onclick="document.getElementById('formulario').scrollIntoView({behavior: 'smooth'})">
+                <div style="font-size: var(--text-4xl); margin-bottom: var(--space-4);">✉️</div>
+                <h3 style="color: white; margin-bottom: var(--space-2); font-size: var(--text-xl);">Formulario</h3>
+                <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: var(--text-sm);">Mensaje detallado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Principal -->
+<section class="section" style="padding-top: var(--space-16);">
+    <div class="container">
+        <div class="grid grid-cols-2 gap-16">
+            <!-- Formulario Espectacular -->
+            <div id="formulario">
+                <div style="background: linear-gradient(135deg, var(--primary-50), var(--secondary-50)); padding: var(--space-2); border-radius: var(--radius-3xl); margin-bottom: var(--space-8);">
+                    <h2 style="color: var(--primary-800); margin: 0; padding: var(--space-6); text-align: center; font-size: var(--text-3xl); font-weight: 700;">
+                        🚀 Escríbenos Tu Consulta
+                    </h2>
+                </div>
+                
+                <form class="card spectacular-form" style="background: white; border: 2px solid var(--primary-100); box-shadow: var(--shadow-2xl); padding: var(--space-8);" method="post" action="#" aria-label="Formulario de Contacto Espectacular">
+                    {% csrf_token %}
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--primary-700); font-size: var(--text-lg);">
+                            👤 Nombre Completo *
+                        </label>
+                        <input type="text" name="nombre" required class="spectacular-input"
+                               style="width: 100%; padding: var(--space-4); border: 3px solid var(--primary-200); border-radius: var(--radius-xl); font-size: var(--text-lg); transition: var(--transition-all); background: var(--primary-25);"
+                               placeholder="Tu nombre completo">
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--primary-700); font-size: var(--text-lg);">
+                            📧 Correo Electrónico *
+                        </label>
+                        <input type="email" name="email" required class="spectacular-input"
+                               style="width: 100%; padding: var(--space-4); border: 3px solid var(--primary-200); border-radius: var(--radius-xl); font-size: var(--text-lg); transition: var(--transition-all); background: var(--primary-25);"
+                               placeholder="tu@email.com">
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--primary-700); font-size: var(--text-lg);">
+                            🎯 ¿En qué te podemos ayudar? *
+                        </label>
+                        <select name="asunto" required class="spectacular-input"
+                                style="width: 100%; padding: var(--space-4); border: 3px solid var(--primary-200); border-radius: var(--radius-xl); font-size: var(--text-lg); transition: var(--transition-all); background: var(--primary-25); appearance: none; background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 20 20\"><path stroke=\"%23374151\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"m6 8 4 4 4-4\"/></svg>'); background-position: right 16px center; background-repeat: no-repeat; background-size: 20px;">
+                            <option value="">Selecciona una opción...</option>
+                            <option value="afiliacion">🎯 Quiero afiliarme a la cooperativa</option>
+                            <option value="creditos">💰 Información sobre créditos</option>
+                            <option value="auxilios">🤝 Consultas sobre auxilios</option>
+                            <option value="ahorros">🏦 Servicios de ahorro</option>
+                            <option value="reclamos">⚠️ Quejas y reclamos</option>
+                            <option value="general">ℹ️ Información general</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-8);">
+                        <label style="display: block; margin-bottom: var(--space-3); font-weight: 700; color: var(--primary-700); font-size: var(--text-lg);">
+                            💬 Cuéntanos tu consulta *
+                        </label>
+                        <textarea name="mensaje" required rows="6" class="spectacular-input"
+                                  style="width: 100%; padding: var(--space-4); border: 3px solid var(--primary-200); border-radius: var(--radius-xl); font-size: var(--text-lg); transition: var(--transition-all); background: var(--primary-25); resize: vertical; font-family: var(--font-sans);"
+                                  placeholder="Describe detalladamente tu consulta o necesidad..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg spectacular-submit" style="width: 100%; font-size: var(--text-xl); padding: var(--space-4) var(--space-8); background: linear-gradient(135deg, var(--primary-600), var(--secondary-600)); border: none; position: relative; overflow: hidden;">
+                        🚀 Enviar Mi Consulta
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Información de Contacto Premium -->
+            <div>
+                <div style="background: linear-gradient(135deg, var(--secondary-50), var(--accent-50)); padding: var(--space-2); border-radius: var(--radius-3xl); margin-bottom: var(--space-8);">
+                    <h2 style="color: var(--secondary-800); margin: 0; padding: var(--space-6); text-align: center; font-size: var(--text-3xl); font-weight: 700;">
+                        📍 Información de Contacto
+                    </h2>
+                </div>
+                
+                <!-- Tarjetas de Contacto -->
+                <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+                    <!-- Ubicación -->
+                    <div class="card info-card" style="background: linear-gradient(135deg, var(--primary-50), var(--primary-100)); border: 2px solid var(--primary-200); padding: var(--space-6);">
+                        <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4);">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-3xl); color: white; box-shadow: var(--shadow-lg);">
+                                🏢
+                            </div>
+                            <div>
+                                <h3 style="color: var(--primary-800); margin-bottom: var(--space-2); font-size: var(--text-2xl);">Oficina Principal</h3>
+                                <p style="color: var(--primary-600); margin: 0; font-weight: 600;">Bogotá D.C., Colombia</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: var(--space-4); border-radius: var(--radius-xl); border-left: 4px solid var(--primary-500);">
+                            <p style="color: var(--gray-800); margin: 0; font-size: var(--text-lg); font-weight: 600;">
+                                📍 Carrera 5 # 16 - 14 Of. 402<br>
+                                🏛️ Edificio El Globo<br>
+                                🌆 Centro de Bogotá
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Teléfonos -->
+                    <div class="card info-card" style="background: linear-gradient(135deg, var(--secondary-50), var(--secondary-100)); border: 2px solid var(--secondary-200); padding: var(--space-6);">
+                        <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4);">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--secondary-600), var(--secondary-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-3xl); color: white; box-shadow: var(--shadow-lg);">
+                                📞
+                            </div>
+                            <div>
+                                <h3 style="color: var(--secondary-800); margin-bottom: var(--space-2); font-size: var(--text-2xl);">Líneas Telefónicas</h3>
+                                <p style="color: var(--secondary-600); margin: 0; font-weight: 600;">Lunes a Viernes 8AM - 5PM</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: var(--space-4); border-radius: var(--radius-xl); border-left: 4px solid var(--secondary-500);">
+                            <p style="color: var(--gray-800); margin: 0; font-size: var(--text-lg); font-weight: 600;">
+                                📱 PBX: (601) 3362834<br>
+                                📱 Línea 2: (601) 3362835
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="card info-card" style="background: linear-gradient(135deg, var(--accent-50), var(--accent-100)); border: 2px solid var(--accent-200); padding: var(--space-6);">
+                        <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4);">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent-600), var(--accent-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-3xl); color: white; box-shadow: var(--shadow-lg);">
+                                📧
+                            </div>
+                            <div>
+                                <h3 style="color: var(--accent-800); margin-bottom: var(--space-2); font-size: var(--text-2xl);">Correo Electrónico</h3>
+                                <p style="color: var(--accent-600); margin: 0; font-weight: 600;">Respuesta en 24 horas</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: var(--space-4); border-radius: var(--radius-xl); border-left: 4px solid var(--accent-500);">
+                            <p style="color: var(--gray-800); margin: 0; font-size: var(--text-lg); font-weight: 600;">
+                                ✉️ cooguarpenal78@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón Mapa -->
+                <div style="margin-top: var(--space-8);">
+                    <a href="https://maps.google.com/?q=Carrera+5+16-14+Bogota" target="_blank" class="btn btn-outline btn-lg map-btn" style="width: 100%; justify-content: center; border-color: var(--primary-500); color: var(--primary-700); font-size: var(--text-lg); padding: var(--space-4);">
+                        🗺️ Ver Ubicación en Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final Espectacular -->
+<section style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); color: white; padding: var(--space-20) 0; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 25px 25px; opacity: 0.5;"></div>
+    <div class="container text-center" style="position: relative; z-index: 2;">
+        <h2 style="color: white; font-size: var(--text-4xl); margin-bottom: var(--space-6); font-weight: 700;">
+            🚀 ¡Tu Futuro Financiero Te Espera!
+        </h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: var(--text-xl); margin-bottom: var(--space-10); max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            No esperes más para acceder a los mejores beneficios financieros. 
+            <strong>¡Contáctanos ahora y empieza a disfrutar de ser parte de COOGUARDPENAL!</strong>
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-6); flex-wrap: wrap;">
+            <a href="https://wa.me/573362834" target="_blank" class="btn btn-lg final-cta-whatsapp" style="background: #25D366; color: white; font-size: var(--text-lg); padding: var(--space-4) var(--space-8); border: 3px solid #25D366;">
+                📱 WhatsApp Ahora
+            </a>
+            <a href="tel:+5713362834" class="btn btn-outline btn-lg final-cta-phone" style="border-color: white; color: white; font-size: var(--text-lg); padding: var(--space-4) var(--space-8); border-width: 3px;">
+                📞 Llamar Ya
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Efectos espectaculares para las tarjetas de contacto */
+.contact-card-whatsapp:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+}
+
+.contact-card-phone:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
+.contact-card-form:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3);
+}
+
+/* Efectos para las tarjetas de información */
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-2xl);
+}
+
+/* Efectos para los inputs del formulario */
+.spectacular-input:focus {
+    outline: none !important;
+    border-color: var(--primary-500) !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+    transform: scale(1.02);
+}
+
+/* Efecto para el formulario completo */
+.spectacular-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Efectos para el botón submit */
+.spectacular-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+    animation: pulse 1s infinite;
+}
+
+/* Efectos para el botón del mapa */
+.map-btn:hover {
+    transform: translateY(-3px);
+    background: var(--primary-50);
+    border-color: var(--primary-600);
+    color: var(--primary-800);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Efectos para los CTAs finales */
+.final-cta-whatsapp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+    background: #20c55e !important;
+}
+
+.final-cta-phone:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// Formulario mejorado con validaciones y efectos
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validaciones básicas
+    const nombre = this.querySelector('input[name="nombre"]').value.trim();
+    const email = this.querySelector('input[name="email"]').value.trim();
+    const asunto = this.querySelector('select[name="asunto"]').value;
+    const mensaje = this.querySelector('textarea[name="mensaje"]').value.trim();
+    
+    if (!nombre || !email || !asunto || !mensaje) {
+        alert('⚠️ Por favor completa todos los campos obligatorios.');
+        return;
+    }
+    
+    // Mostrar mensaje de éxito espectacular
+    const button = this.querySelector('button[type="submit"]');
+    const originalText = button.innerHTML;
+    
+    button.innerHTML = '✅ ¡Enviando...!';
+    button.style.background = 'linear-gradient(135deg, #F59E0B, #D97706)';
+    button.disabled = true;
+    
+    // Simular envío
+    setTimeout(() => {
+        button.innerHTML = '✅ ¡Mensaje Enviado!';
+        button.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+        
+        setTimeout(() => {
+            // Mensaje de éxito personalizado
+            alert(`🎉 ¡Gracias ${nombre}!\n\n✅ Tu mensaje sobre "${asunto}" ha sido enviado exitosamente.\n📞 Nos pondremos en contacto contigo muy pronto al correo ${email}.\n🚀 ¡Prepárate para conocer todos nuestros beneficios!`);
+            
+            // Limpiar formulario
+            this.reset();
+            
+            // Restaurar botón
+            button.innerHTML = originalText;
+            button.style.background = 'linear-gradient(135deg, var(--primary-600), var(--secondary-600))';
+            button.disabled = false;
+        }, 2000);
+    }, 1000);
+});
+
+// Efectos de typing en tiempo real para los inputs
+document.querySelectorAll('.spectacular-input').forEach(input => {
+    input.addEventListener('input', function() {
+        if (this.value.length > 0) {
+            this.style.borderColor = 'var(--secondary-500)';
+            this.style.background = 'var(--secondary-25)';
+        } else {
+            this.style.borderColor = 'var(--primary-200)';
+            this.style.background = 'var(--primary-25)';
+        }
+    });
+});
+
+// Efectos de parallax suave en scroll
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.hero');
+    const speed = scrolled * 0.5;
+    
+    if (parallax) {
+        parallax.style.transform = `translateY(${speed}px)`;
+    }
+});
+
+// Contador de caracteres para el textarea
+const textarea = document.querySelector('textarea[name="mensaje"]');
+if (textarea) {
+    const counter = document.createElement('div');
+    counter.style.cssText = 'text-align: right; color: var(--gray-500); font-size: var(--text-sm); margin-top: var(--space-2);';
+    counter.innerHTML = '0 caracteres';
+    textarea.parentNode.appendChild(counter);
+    
+    textarea.addEventListener('input', function() {
+        const length = this.value.length;
+        counter.innerHTML = `${length} caracteres`;
+        
+        if (length > 500) {
+            counter.style.color = 'var(--secondary-600)';
+        } else if (length > 200) {
+            counter.style.color = 'var(--accent-600)';
+        } else {
+            counter.style.color = 'var(--gray-500)';
+        }
+    });
+}
+</script>
+{% endblock %}

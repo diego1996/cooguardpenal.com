@@ -1,0 +1,289 @@
+{% extends 'website/base.html' %}
+{% block title %}Contacto - COOGUARDPENAL Ltda.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero section-sm">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in-down">
+                Contáctanos <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Hoy</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in">
+                Estamos aquí para ayudarte. Encuentra todas las formas de comunicarte con nosotros.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Información de Contacto -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid-cols-2 gap-12">
+            <!-- Formulario de Contacto -->
+            <div>
+                <h2 style="margin-bottom: var(--space-6);">Envíanos un Mensaje</h2>
+                <form class="card" style="background: var(--gray-50);">
+                    <div style="margin-bottom: var(--space-6);">
+                        <label for="name" style="display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--gray-700);">
+                            Nombre Completo *
+                        </label>
+                        <input type="text" id="name" name="name" required 
+                               style="width: 100%; padding: var(--space-3); border: 2px solid var(--gray-200); border-radius: var(--radius-lg); font-size: var(--text-base); transition: var(--transition-all);"
+                               placeholder="Tu nombre completo">
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label for="email" style="display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--gray-700);">
+                            Correo Electrónico *
+                        </label>
+                        <input type="email" id="email" name="email" required 
+                               style="width: 100%; padding: var(--space-3); border: 2px solid var(--gray-200); border-radius: var(--radius-lg); font-size: var(--text-base); transition: var(--transition-all);"
+                               placeholder="tu@email.com">
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label for="phone" style="display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--gray-700);">
+                            Teléfono
+                        </label>
+                        <input type="tel" id="phone" name="phone" 
+                               style="width: 100%; padding: var(--space-3); border: 2px solid var(--gray-200); border-radius: var(--radius-lg); font-size: var(--text-base); transition: var(--transition-all);"
+                               placeholder="Tu número de teléfono">
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label for="subject" style="display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--gray-700);">
+                            Asunto *
+                        </label>
+                        <select id="subject" name="subject" required 
+                                style="width: 100%; padding: var(--space-3); border: 2px solid var(--gray-200); border-radius: var(--radius-lg); font-size: var(--text-base); transition: var(--transition-all);">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="informacion">Información General</option>
+                            <option value="creditos">Créditos y Préstamos</option>
+                            <option value="auxilios">Auxilios y Beneficios</option>
+                            <option value="afiliacion">Proceso de Afiliación</option>
+                            <option value="reclamos">Quejas y Reclamos</option>
+                            <option value="sugerencias">Sugerencias</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label for="message" style="display: block; margin-bottom: var(--space-2); font-weight: 600; color: var(--gray-700);">
+                            Mensaje *
+                        </label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  style="width: 100%; padding: var(--space-3); border: 2px solid var(--gray-200); border-radius: var(--radius-lg); font-size: var(--text-base); transition: var(--transition-all); resize: vertical;"
+                                  placeholder="Describe tu consulta o mensaje"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                        📧 Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Información de Contacto -->
+            <div>
+                <h2 style="margin-bottom: var(--space-6);">Información de Contacto</h2>
+                
+                <div class="card" style="margin-bottom: var(--space-8);">
+                    <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-2xl);">
+                            📍
+                        </div>
+                        <div>
+                            <h3 style="color: var(--gray-900); margin-bottom: var(--space-2); font-family: var(--font-sans);">Ubicación</h3>
+                            <p style="color: var(--gray-600); margin: 0;">
+                                Carrera 5 # 16 - 14 Of. 402<br>
+                                Edificio El Globo<br>
+                                Bogotá D.C., Colombia
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary-600), var(--secondary-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-2xl);">
+                            📞
+                        </div>
+                        <div>
+                            <h3 style="color: var(--gray-900); margin-bottom: var(--space-2); font-family: var(--font-sans);">Teléfonos</h3>
+                            <p style="color: var(--gray-600); margin: 0;">
+                                PBX: (601) 3362834<br>
+                                (601) 3362835
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-600), var(--accent-500)); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-2xl);">
+                            ✉️
+                        </div>
+                        <div>
+                            <h3 style="color: var(--gray-900); margin-bottom: var(--space-2); font-family: var(--font-sans);">Correo Electrónico</h3>
+                            <p style="color: var(--gray-600); margin: 0;">
+                                cooguarpenal78@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: var(--space-4);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; font-size: var(--text-2xl);">
+                            🕒
+                        </div>
+                        <div>
+                            <h3 style="color: var(--gray-900); margin-bottom: var(--space-2); font-family: var(--font-sans);">Horarios de Atención</h3>
+                            <p style="color: var(--gray-600); margin: 0;">
+                                Lunes a Viernes<br>
+                                8:00 AM - 5:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botones de Contacto Rápido -->
+                <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                    <a href="https://wa.me/573362834" target="_blank" class="btn btn-lg" style="background: #25D366; color: white; width: 100%; justify-content: center;">
+                        💬 Chatear por WhatsApp
+                    </a>
+                    <a href="tel:+5713362834" class="btn btn-outline btn-lg" style="width: 100%; justify-content: center;">
+                        📞 Llamar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mapa (Placeholder) -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>Cómo Llegar</h2>
+            <p class="lead" style="max-width: 600px; margin: 0 auto;">
+                Encuéntranos fácilmente en el centro de Bogotá
+            </p>
+        </div>
+        
+        <div style="background: var(--gray-200); height: 400px; border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+            <div style="text-align: center; z-index: 2;">
+                <div style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">🗺️</div>
+                <h3 style="color: var(--gray-700); margin-bottom: var(--space-3);">Mapa de Ubicación</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--space-6);">
+                    Carrera 5 # 16 - 14 Of. 402, Edificio El Globo<br>
+                    Bogotá D.C., Colombia
+                </p>
+                <a href="https://maps.google.com/?q=Carrera+5+16-14+Bogota" target="_blank" class="btn btn-primary">
+                    📍 Ver en Google Maps
+                </a>
+            </div>
+            <div style="position: absolute; inset: 0; background: linear-gradient(45deg, var(--primary-100), var(--secondary-100)); opacity: 0.3;"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Preguntas Frecuentes -->
+<section class="section">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>Preguntas Frecuentes</h2>
+            <p class="lead" style="max-width: 600px; margin: 0 auto;">
+                Respuestas rápidas a las consultas más comunes
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8">
+            <div class="card">
+                <h3 style="color: var(--primary-700); margin-bottom: var(--space-3); font-family: var(--font-sans); display: flex; align-items: center; gap: var(--space-2);">
+                    ❓ ¿Cómo me puedo afiliar?
+                </h3>
+                <p style="color: var(--gray-700); margin: 0;">
+                    Debes ser miembro activo o pensionado del sistema penitenciario colombiano. 
+                    Contáctanos para conocer los requisitos específicos y el proceso de afiliación.
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3 style="color: var(--secondary-700); margin-bottom: var(--space-3); font-family: var(--font-sans); display: flex; align-items: center; gap: var(--space-2);">
+                    💰 ¿Cuáles son las tasas de interés?
+                </h3>
+                <p style="color: var(--gray-700); margin: 0;">
+                    Ofrecemos las tasas más competitivas del mercado: 0.8% mensual para créditos educativos 
+                    y 1.2% mensual para créditos personales.
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3 style="color: var(--accent-700); margin-bottom: var(--space-3); font-family: var(--font-sans); display: flex; align-items: center; gap: var(--space-2);">
+                    ⏰ ¿Cuánto tiempo toma la aprobación?
+                </h3>
+                <p style="color: var(--gray-700); margin: 0;">
+                    Los créditos educativos tienen aprobación inmediata. Los créditos personales 
+                    se evalúan en máximo 48 horas hábiles.
+                </p>
+            </div>
+            
+            <div class="card">
+                <h3 style="color: #8B5CF6; margin-bottom: var(--space-3); font-family: var(--font-sans); display: flex; align-items: center; gap: var(--space-2);">
+                    🛡️ ¿Qué auxilios están disponibles?
+                </h3>
+                <p style="color: var(--gray-700); margin: 0;">
+                    Ofrecemos auxilios jurídicos, solidarios, de paternidad/maternidad, 
+                    funerarios y de calamidad para nuestros asociados.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="section section-gradient">
+    <div class="container text-center">
+        <h2 style="color: white; margin-bottom: var(--space-6);">¿Listo para Contactarnos?</h2>
+        <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+            Estamos aquí para atenderte y resolver todas tus dudas. ¡No dudes en comunicarte con nosotros!
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="https://wa.me/573362834" target="_blank" class="btn btn-lg" style="background: #25D366; color: white;">
+                💬 WhatsApp
+            </a>
+            <a href="tel:+5713362834" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+                📞 Llamar
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Estilos para el formulario */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-500) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+input, select, textarea {
+    font-family: var(--font-sans);
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    appearance: none;
+}
+</style>
+
+<script>
+// Formulario de contacto
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Aquí se integraría con el backend para enviar el formulario
+    alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+    
+    // Limpiar formulario
+    this.reset();
+});
+</script>
+{% endblock %}

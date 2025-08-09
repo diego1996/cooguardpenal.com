@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="es-CO" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}COOGUARDPENAL Ltda. - Cooperativa Multiactiva{% endblock %}</title>
+    <meta name="description" content="Cooperativa multiactiva con más de 35 años al servicio de la Guardia Penitenciaria y Pensionados de Colombia. Créditos, auxilios y beneficios exclusivos.">
+    <meta name="theme-color" content="#0B4D6B">
+    
+    <!-- Social Media -->
+    <meta property="og:title" content="COOGUARDPENAL - Tu Cooperativa de Confianza">
+    <meta property="og:description" content="35+ años ofreciendo soluciones financieras y beneficios exclusivos para la Guardia Penitenciaria y Pensionados.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cooguardpenal.com/">
+    
+    <!-- Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =================== VARIABLES PREMIUM PENAL GUARD =================== */
+        :root {
+            /* Penal Guard Theme Colors */
+            --guard-navy: #1E3A8A;
+            --guard-blue: #3B82F6;
+            --guard-steel: #64748B;
+            --guard-gold: #F59E0B;
+            --guard-silver: #E5E7EB;
+            --guard-bronze: #92400E;
+            --guard-emerald: #10B981;
+            --guard-crimson: #DC2626;
+            /* Paleta de colores institucional */
+            --primary-900: #0B4D6B;     /* Azul institucional profundo */
+            --primary-800: #0E5B7E;     /* Azul institucional */
+            --primary-700: #1A6B8F;     /* Azul institucional medio */
+            --primary-600: #2563EB;     /* Azul brillante */
+            --primary-500: #3B82F6;     /* Azul claro */
+            --primary-400: #60A5FA;     /* Azul suave */
+            
+            --secondary-900: #134E4A;   /* Verde institucional oscuro */
+            --secondary-800: #166534;   /* Verde institucional */
+            --secondary-700: #15803D;   /* Verde medio */
+            --secondary-600: #16A34A;   /* Verde brillante */
+            --secondary-500: #22C55E;   /* Verde claro */
+            
+            --accent-900: #92400E;      /* Oro oscuro */
+            --accent-800: #A16207;      /* Oro medio */
+            --accent-700: #CA8A04;      /* Oro */
+            --accent-600: #EAB308;      /* Oro brillante */
+            --accent-500: #FDE047;      /* Oro claro */
+            
+            /* Neutrales sofisticados */
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+            
+            --white: #FFFFFF;
+            --black: #000000;
+            
+            /* Tipografía moderna */
+            --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'DM Serif Display', Georgia, serif;
+            
+            /* Tamaños de texto responsivos */
+            --text-xs: 0.75rem;    /* 12px */
+            --text-sm: 0.875rem;   /* 14px */
+            --text-base: 1rem;     /* 16px */
+            --text-lg: 1.125rem;   /* 18px */
+            --text-xl: 1.25rem;    /* 20px */
+            --text-2xl: 1.5rem;    /* 24px */
+            --text-3xl: 1.875rem;  /* 30px */
+            --text-4xl: 2.25rem;   /* 36px */
+            --text-5xl: 3rem;      /* 48px */
+            --text-6xl: 3.75rem;   /* 60px */
+            --text-7xl: 4.5rem;    /* 72px */
+            --text-8xl: 6rem;      /* 96px */
+            --text-9xl: 8rem;      /* 128px */
+            
+            /* Espaciado consistente */
+            --space-0: 0;
+            --space-1: 0.25rem;    /* 4px */
+            --space-2: 0.5rem;     /* 8px */
+            --space-3: 0.75rem;    /* 12px */
+            --space-4: 1rem;       /* 16px */
+            --space-5: 1.25rem;    /* 20px */
+            --space-6: 1.5rem;     /* 24px */
+            --space-8: 2rem;       /* 32px */
+            --space-10: 2.5rem;    /* 40px */
+            --space-12: 3rem;      /* 48px */
+            --space-16: 4rem;      /* 64px */
+            --space-20: 5rem;      /* 80px */
+            --space-24: 6rem;      /* 96px */
+            --space-32: 8rem;      /* 128px */
+            
+            /* Sombras cinematográficas */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+            
+            /* Bordes y radio */
+            --radius-none: 0px;
+            --radius-sm: 0.125rem;   /* 2px */
+            --radius-base: 0.25rem;  /* 4px */
+            --radius-md: 0.375rem;   /* 6px */
+            --radius-lg: 0.5rem;     /* 8px */
+            --radius-xl: 0.75rem;    /* 12px */
+            --radius-2xl: 1rem;      /* 16px */
+            --radius-3xl: 1.5rem;    /* 24px */
+            --radius-full: 9999px;
+            
+            /* Transiciones suaves */
+            --transition-none: none;
+            --transition-all: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-colors: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-opacity: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-shadow: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-transform: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Animaciones especiales */
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+            --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            
+            /* Z-index organizados */
+            --z-hide: -1;
+            --z-auto: auto;
+            --z-0: 0;
+            --z-10: 10;
+            --z-20: 20;
+            --z-30: 30;
+            --z-40: 40;
+            --z-50: 50;
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal: 1040;
+            --z-popover: 1050;
+            --z-tooltip: 1060;
+        }
+
+        /* =================== RESET MODERNO =================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--space-20);
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* =================== TIPOGRAFÍA PREMIUM =================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--gray-900);
+            margin-bottom: var(--space-6);
+        }
+
+        h1 {
+            font-size: clamp(var(--text-4xl), 6vw, var(--text-8xl));
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(var(--text-3xl), 4vw, var(--text-6xl));
+            line-height: 1.15;
+        }
+
+        h3 {
+            font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+            line-height: 1.2;
+        }
+
+        h4 {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            font-family: var(--font-sans);
+        }
+
+        p {
+            font-size: var(--text-lg);
+            line-height: 1.75;
+            color: var(--gray-600);
+            margin-bottom: var(--space-6);
+        }
+
+        .lead {
+            font-size: var(--text-xl);
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--gray-700);
+        }
+
+        .small {
+            font-size: var(--text-sm);
+            color: var(--gray-500);
+        }
+
+        /* =================== LAYOUT SYSTEM =================== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding: 0 var(--space-6);
+        }
+
+        .container-narrow {
+            max-width: 800px;
+        }
+
+        .container-wide {
+            max-width: 1400px;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            gap: var(--space-8);
+        }
+
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+        .grid-auto {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        /* Flex utilities */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .items-end { align-items: flex-end; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        .flex-1 { flex: 1 1 0%; }
+
+        /* Spacing utilities */
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+        .gap-8 { gap: var(--space-8); }
+        .gap-12 { gap: var(--space-12); }
+
+        /* =================== HEADER PREMIUM =================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: var(--z-fixed);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: var(--transition-all);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            text-decoration: none;
+            transition: var(--transition-transform);
+        }
+
+        .brand:hover {
+            transform: translateY(-1px);
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-800), var(--primary-600));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: var(--text-xl);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-all);
+        }
+
+        .brand:hover .brand-logo {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .brand-name {
+            font-family: var(--font-serif);
+            font-size: var(--text-2xl);
+            font-weight: 400;
+            color: var(--primary-900);
+            letter-spacing: -0.01em;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            font-size: var(--text-base);
+            color: var(--gray-700);
+            text-decoration: none;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-colors);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-600), var(--secondary-600));
+            transition: all 300ms var(--ease-out-quart);
+            transform: translateX(-50%);
+            border-radius: var(--radius-full);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-700);
+            background: var(--gray-50);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-radius: var(--radius-lg);
+            transition: var(--transition-colors);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--gray-100);
+        }
+
+        .hamburger {
+            width: 24px;
+            height: 2px;
+            background: var(--gray-700);
+            border-radius: var(--radius-full);
+            transition: var(--transition-all);
+            position: relative;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--gray-700);
+            border-radius: var(--radius-full);
+            transition: var(--transition-all);
+        }
+
+        .hamburger::before { top: -8px; }
+        .hamburger::after { bottom: -8px; }
+
+        /* =================== BOTONES ESPECTACULARES =================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: var(--text-base);
+            line-height: 1;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            transition: var(--transition-all);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 600ms ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-600));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary-700), var(--secondary-600));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-700);
+            border: 2px solid var(--primary-300);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-700);
+            color: var(--white);
+            border-color: var(--primary-700);
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        .btn-ghost:hover {
+            background: var(--gray-200);
+            transform: translateY(-1px);
+        }
+
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-lg);
+            border-radius: var(--radius-2xl);
+        }
+
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-sm);
+        }
+
+        /* =================== CARDS PREMIUM =================== */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-base);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition-all);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-600), var(--secondary-600), var(--accent-600));
+            transform: scaleX(0);
+            transition: transform 400ms var(--ease-out-quart);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-200);
+        }
+
+        .card-header {
+            margin-bottom: var(--space-6);
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-2xl);
+            background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-4);
+            transition: var(--transition-transform);
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: var(--text-2xl);
+            font-weight: 400;
+            color: var(--gray-900);
+            margin-bottom: var(--space-3);
+        }
+
+        .card-text {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+        }
+
+        /* =================== SECTIONS =================== */
+        .section {
+            padding: var(--space-24) 0;
+            position: relative;
+        }
+
+        .section-sm {
+            padding: var(--space-16) 0;
+        }
+
+        .section-lg {
+            padding: var(--space-32) 0;
+        }
+
+        .section-alt {
+            background: var(--gray-50);
+        }
+
+        .section-dark {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .section-gradient {
+            background: linear-gradient(135deg, var(--primary-900), var(--primary-700), var(--secondary-700));
+            color: var(--white);
+        }
+
+        /* =================== HERO SECTION =================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-700) 50%, var(--secondary-800) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M40 20L48 36L40 52L32 36L40 20ZM40 0L56 28L40 56L24 28L40 0Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: float 20s ease-in-out infinite;
+        }
+
+        /* =================== PENAL GUARD THEMED PATTERNS =================== */
+        
+        /* Security Shield Pattern */
+        .section-security {
+            position: relative;
+        }
+        
+        .section-security::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230369A1' fill-opacity='0.05'%3E%3Cpath d='M30 10L40 25L30 40L20 25L30 10Z'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Justice Scales Pattern */
+        .section-justice {
+            position: relative;
+        }
+        
+        .section-justice::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F59E0B' fill-opacity='0.06'%3E%3Cpath d='M35 20L45 30L35 40L25 30L35 20Z'/%3E%3Cpath d='M20 35L30 45L20 55L10 45L20 35Z'/%3E%3Cpath d='M50 35L60 45L50 55L40 45L50 35Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Institutional Grid Pattern */
+        .section-institutional {
+            position: relative;
+        }
+        
+        .section-institutional::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E3A8A' fill-opacity='0.03'%3E%3Cpath d='M0 0L25 25L0 50L-25 25L0 0Z'/%3E%3Cpath d='M25 0L50 25L25 50L0 25L25 0Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: var(--z-10);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            color: var(--white);
+            margin-bottom: var(--space-6);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-8);
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* =================== FLOATING BUTTONS PREMIUM =================== */
+        .floating-buttons {
+            position: fixed;
+            bottom: var(--space-6);
+            right: var(--space-6);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            z-index: var(--z-fixed);
+        }
+
+        .float-btn {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--white);
+            font-size: var(--text-2xl);
+            box-shadow: var(--shadow-xl);
+            transition: all 300ms var(--ease-out-quart);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Efecto de brillo animado */
+        .float-btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 600ms ease;
+        }
+
+        .float-btn:hover::before {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        /* Tooltip mejorado */
+        .float-btn .tooltip {
+            position: absolute;
+            right: calc(100% + 16px);
+            top: 50%;
+            transform: translateY(-50%) scale(0.8);
+            background: var(--gray-900);
+            color: var(--white);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 300ms var(--ease-out-quart);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .float-btn .tooltip::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 6px solid var(--gray-900);
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        .float-btn:hover .tooltip {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+
+        .float-btn:hover {
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .float-btn:active {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #20BA5A);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #20BA5A, #1DA851);
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+
+        /* Chat AI Button */
+        .chat-btn {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-600));
+            animation: pulse-chat 3s infinite;
+        }
+
+        .chat-btn:hover {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+        }
+
+        .chat-btn.active {
+            background: linear-gradient(135deg, var(--accent-600), var(--accent-500));
+            animation: none;
+        }
+
+        @keyframes pulse-chat {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(30, 58, 138, 0); }
+        }
+
+        /* =================== CHAT PANEL PREMIUM =================== */
+        .chat-panel {
+            position: fixed;
+            bottom: var(--space-6);
+            right: var(--space-6);
+            width: 380px;
+            height: 520px;
+            background: var(--white);
+            border-radius: var(--radius-3xl);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            border: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+            z-index: var(--z-modal);
+            transform: translateY(100%) scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 400ms var(--ease-out-quart);
+            overflow: hidden;
+        }
+
+        .chat-panel.active {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-700), var(--primary-600));
+            color: var(--white);
+            padding: var(--space-6);
+            border-radius: var(--radius-3xl) var(--radius-3xl) 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .chat-header-content {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-lg);
+        }
+
+        .chat-header-text h3 {
+            margin: 0;
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--white);
+            font-family: var(--font-sans);
+        }
+
+        .chat-status {
+            font-size: var(--text-sm);
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+
+        .chat-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            padding: var(--space-2);
+            border-radius: 50%;
+            transition: var(--transition-all);
+            position: relative;
+            z-index: 1;
+        }
+
+        .chat-close:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            flex-grow: 1;
+            padding: var(--space-6);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            background: var(--gray-50);
+        }
+
+        .chat-messages::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: var(--gray-300);
+            border-radius: var(--radius-full);
+        }
+
+        .chat-message {
+            max-width: 85%;
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-xl);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+            position: relative;
+            animation: messageSlideIn 300ms var(--ease-out-quart);
+        }
+
+        @keyframes messageSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-message.user {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            color: var(--white);
+            align-self: flex-end;
+            border-bottom-right-radius: var(--radius-base);
+        }
+
+        .chat-message.bot {
+            background: var(--white);
+            color: var(--gray-800);
+            align-self: flex-start;
+            border-bottom-left-radius: var(--radius-base);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+
+        .chat-message.system {
+            background: var(--gray-200);
+            color: var(--gray-600);
+            align-self: center;
+            font-size: var(--text-xs);
+            font-style: italic;
+            border-radius: var(--radius-full);
+            padding: var(--space-2) var(--space-3);
+        }
+
+        /* Typing indicator */
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            border-bottom-left-radius: var(--radius-base);
+            align-self: flex-start;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 3px;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gray-400);
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typingAnimation {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Chat Input */
+        .chat-input {
+            padding: var(--space-6);
+            border-top: 1px solid var(--gray-200);
+            background: var(--white);
+            border-radius: 0 0 var(--radius-3xl) var(--radius-3xl);
+        }
+
+        .chat-input-group {
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-end;
+        }
+
+        .chat-input-field {
+            flex-grow: 1;
+            padding: var(--space-3) var(--space-4);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            font-size: var(--text-sm);
+            font-family: var(--font-sans);
+            resize: none;
+            min-height: 44px;
+            max-height: 100px;
+            transition: var(--transition-all);
+            background: var(--gray-50);
+        }
+
+        .chat-input-field:focus {
+            outline: none;
+            border-color: var(--primary-500);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .chat-send-btn {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-all);
+            flex-shrink: 0;
+        }
+
+        .chat-send-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-400));
+        }
+
+        /* =================== CHAT ELEMENTS STYLES =================== */
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+            color: white;
+            padding: var(--space-4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+            position: relative;
+        }
+
+        .chat-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+                        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+            background-size: 10px 10px;
+            opacity: 0.3;
+            border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+        }
+
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-xl);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .chat-title {
+            font-weight: 700;
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-1);
+        }
+
+        .chat-status {
+            font-size: var(--text-sm);
+            color: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .chat-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-all);
+            font-size: var(--text-lg);
+        }
+
+        .chat-close:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: var(--space-4);
+            overflow-y: auto;
+            background: var(--gray-50);
+            max-height: 320px;
+        }
+
+        .chat-message {
+            margin-bottom: var(--space-4);
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-start;
+        }
+
+        .chat-message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-sm);
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .chat-message.user .message-avatar {
+            background: linear-gradient(135deg, var(--secondary-100), var(--secondary-200));
+        }
+
+        .message-content {
+            flex: 1;
+        }
+
+        .message-text {
+            background: white;
+            padding: var(--space-3);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+            margin-bottom: var(--space-1);
+            white-space: pre-line;
+        }
+
+        .chat-message.user .message-text {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
+        }
+
+        .chat-message.bot .message-text {
+            border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-sm);
+        }
+
+        .message-time {
+            font-size: var(--text-xs);
+            color: var(--gray-500);
+            text-align: right;
+        }
+
+        .chat-message.user .message-time {
+            text-align: left;
+        }
+
+        .typing-indicator {
+            padding: var(--space-3);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--gray-100);
+            color: var(--gray-600);
+            font-size: var(--text-sm);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dots span {
+            width: 6px;
+            height: 6px;
+            background: var(--primary-500);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes inputFocus {
+            0% { box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+            50% { box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2), 0 4px 12px rgba(0,0,0,0.1); }
+            100% { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0,0,0,0.1); }
+        }
+
+        .chat-input:focus {
+            animation: inputFocus 0.3s ease-out;
+        }
+
+        .chat-input-container {
+            display: flex;
+            padding: var(--space-4);
+            background: linear-gradient(135deg, #F8FAFC, #F1F5F9);
+            border-top: 1px solid var(--gray-200);
+            border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+            gap: var(--space-3);
+            position: relative;
+        }
+
+        .chat-input-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-300), transparent);
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: var(--space-3) var(--space-4);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            font-size: var(--text-base);
+            font-family: var(--font-sans);
+            background: white;
+            color: var(--gray-800);
+            transition: var(--transition-all);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            outline: none;
+        }
+
+        .chat-input:focus {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+
+        .chat-input::placeholder {
+            color: var(--gray-400);
+            font-style: italic;
+        }
+
+        .chat-send {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+            border: none;
+            border-radius: var(--radius-2xl);
+            color: white;
+            cursor: pointer;
+            transition: var(--transition-all);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-lg);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chat-send::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .chat-send:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .chat-send:hover::before {
+            left: 100%;
+        }
+
+        .chat-send:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .chat-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .chat-send-btn:active {
+            transform: scale(0.95);
+        }
+
+        .chat-send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .quick-action {
+            background: var(--primary-100);
+            color: var(--primary-700);
+            border: none;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            cursor: pointer;
+            transition: var(--transition-all);
+            font-weight: 500;
+        }
+
+        .quick-action:hover {
+            background: var(--primary-200);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Responsive */
+        /* =================== QUICK ACTION BUTTONS =================== */
+        .quick-btn {
+            background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+            border: 2px solid var(--primary-200);
+            color: var(--primary-700);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-lg);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-all);
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        .quick-btn:hover {
+            background: linear-gradient(135deg, var(--primary-100), var(--primary-200));
+            border-color: var(--primary-400);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        .quick-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+        }
+
+        /* =================== RESPONSIVE =================== */
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: var(--space-4);
+                right: var(--space-4);
+            }
+
+            .chat-panel {
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+                margin: 0;
+            }
+
+            .chat-panel.active {
+                transform: translateY(0) scale(1);
+            }
+
+            .chat-header {
+                border-radius: 0;
+                padding-top: max(var(--space-6), env(safe-area-inset-top));
+            }
+
+            .float-btn .tooltip {
+                display: none;
+            }
+        }
+
+        /* =================== FOOTER PREMIUM =================== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: var(--space-20) 0 var(--space-8);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-12);
+            margin-bottom: var(--space-12);
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-serif);
+            font-size: var(--text-3xl);
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-section h4 {
+            font-family: var(--font-sans);
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-2);
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: var(--transition-colors);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-500);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--gray-800);
+            color: var(--gray-500);
+        }
+
+        /* =================== RESPONSIVE DESIGN =================== */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: var(--space-6);
+                gap: var(--space-4);
+                box-shadow: var(--shadow-xl);
+                border-top: 1px solid var(--gray-200);
+                transform: translateY(-10px);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-all);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .container {
+                padding: 0 var(--space-4);
+            }
+
+            .grid-cols-2,
+            .grid-cols-3,
+            .grid-cols-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+            }
+
+            .floating-buttons {
+                bottom: var(--space-4);
+                right: var(--space-4);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                min-height: 90vh;
+            }
+
+            .section {
+                padding: var(--space-16) 0;
+            }
+
+            .grid-auto {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* =================== UTILITY CLASSES =================== */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .font-medium { font-weight: 500; }
+
+        .uppercase { text-transform: uppercase; }
+        .lowercase { text-transform: lowercase; }
+        .capitalize { text-transform: capitalize; }
+
+        .tracking-tight { letter-spacing: -0.025em; }
+        .tracking-wide { letter-spacing: 0.025em; }
+
+        .opacity-50 { opacity: 0.5; }
+        .opacity-75 { opacity: 0.75; }
+        .opacity-90 { opacity: 0.9; }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* =================== ANIMATIONS =================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s var(--ease-out-quart);
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 0.6s var(--ease-out-quart);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.5s var(--ease-out-quart);
+        }
+
+        /* =================== SCROLL EFFECTS =================== */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* =================== CUSTOM SCROLLBAR =================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gray-400);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gray-500);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="/" class="brand">
+                <div class="brand-logo">C</div>
+                <span class="brand-name">COOGUARDPENAL</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">Inicio</a>
+                <a href="/servicios/" class="nav-link">Servicios</a>
+                <a href="/nosotros/" class="nav-link">Nosotros</a>
+                <a href="/noticias/" class="nav-link">Noticias</a>
+                <a href="/contacto/" class="nav-link">Contacto</a>
+                <a href="/admin/" class="btn btn-ghost btn-sm">Admin</a>
+                <a href="/portal/" class="btn btn-primary btn-sm">Portal</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>COOGUARDPENAL</h3>
+                    <p>Entidad Cooperativa con más de 35 años al servicio de la Guardia y los Pensionados del Sistema Penitenciario y Carcelario Colombiano.</p>
+                    <div class="contact-info">
+                        <p style="color: var(--gray-400); margin-bottom: var(--space-2);">
+                            📍 Carrera 5 # 16 - 14 Of. 402<br>Ed. El Globo, Bogotá D.C.
+                        </p>
+                        <p style="color: var(--gray-400); margin-bottom: var(--space-2);">
+                            📞 PBX: (601) 3362834 - 3362835
+                        </p>
+                        <p style="color: var(--gray-400);">
+                            ✉️ cooguarpenal78@gmail.com
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="/servicios/#creditos">Créditos Educativos</a></li>
+                        <li><a href="/servicios/#auxilios">Auxilios Jurídicos</a></li>
+                        <li><a href="/servicios/#mutuos">Auxilios Mutuos</a></li>
+                        <li><a href="/servicios/#paternidad">Auxilios de Paternidad</a></li>
+                        <li><a href="/servicios/#ahorros">Ahorro Programado</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Cooperativa</h4>
+                    <ul class="footer-links">
+                        <li><a href="/nosotros/">Sobre Nosotros</a></li>
+                        <li><a href="/nosotros/#mision">Misión y Visión</a></li>
+                        <li><a href="/noticias/">Noticias</a></li>
+                        <li><a href="/contacto/">Contacto</a></li>
+                        <li><a href="/portal/">Portal Asociados</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/terminos/">Términos y Condiciones</a></li>
+                        <li><a href="/privacidad/">Política de Privacidad</a></li>
+                        <li><a href="/estatutos/">Estatutos</a></li>
+                        <li><a href="/reglamentos/">Reglamentos</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 COOGUARDPENAL Ltda. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/573362834" class="float-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            💬
+        </a>
+        <button class="float-btn chat-btn" id="chat-toggle" aria-label="Abrir chat virtual">
+            🤖
+        </button>
+    </div>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel" id="chat-panel">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div style="display: flex; align-items: center; gap: var(--space-3);">
+                <div class="chat-avatar">🤖</div>
+                <div>
+                    <div class="chat-title">Asistente COOGUARDPENAL</div>
+                    <div class="chat-status">
+                        <span class="status-dot"></span>
+                        En línea
+                    </div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="document.getElementById('chat-panel').classList.remove('active')">
+                ✕
+            </button>
+        </div>
+        
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typing-indicator" style="display: none;">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span>El asistente está escribiendo...</span>
+        </div>
+        
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div style="position: relative; flex: 1;">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Escribe tu consulta sobre COOGUARDPENAL..." autocomplete="off" maxlength="500">
+                <div style="position: absolute; right: var(--space-3); top: 50%; transform: translateY(-50%); color: var(--gray-400); font-size: var(--text-sm); pointer-events: none;" id="char-counter">
+                    0/500
+                </div>
+            </div>
+            <button class="chat-send" id="chat-send" title="Enviar mensaje">
+                <span>📤</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.contains('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .section h2, .section p').forEach(el => {
+            observer.observe(el);
+        });
+
+        // =================== CHAT AI FUNCTIONALITY ===================
+        const chatToggle = document.getElementById('chat-toggle');
+        const chatPanel = document.getElementById('chat-panel');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+        const typingIndicator = document.getElementById('typing-indicator');
+        
+        let chatOpen = false;
+        
+        // Toggle chat panel
+        chatToggle.addEventListener('click', () => {
+            chatOpen = !chatOpen;
+            chatPanel.classList.toggle('active', chatOpen);
+            
+            if (chatOpen && chatMessages.children.length === 0) {
+                // Mensaje de bienvenida
+                addMessage('¡Hola! 👋 Soy el asistente virtual de COOGUARDPENAL. ¿En qué puedo ayudarte hoy?', 'bot');
+                showQuickActions();
+            }
+        });
+        
+        // Send message functionality
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Character counter functionality
+        const charCounter = document.getElementById('char-counter');
+        if (chatInput && charCounter) {
+            chatInput.addEventListener('input', function() {
+                const length = this.value.length;
+                charCounter.textContent = `${length}/500`;
+                
+                // Change color based on length
+                if (length > 400) {
+                    charCounter.style.color = 'var(--guard-crimson)';
+                } else if (length > 300) {
+                    charCounter.style.color = 'var(--guard-gold)';
+                } else {
+                    charCounter.style.color = 'var(--gray-400)';
+                }
+                
+                // Update placeholder on focus
+                if (length === 0 && document.activeElement === this) {
+                    this.placeholder = 'Pregunta sobre créditos, auxilios, afiliación...';
+                } else if (length === 0) {
+                    this.placeholder = 'Escribe tu consulta sobre COOGUARDPENAL...';
+                }
+            });
+
+            // Enhanced focus effects
+            chatInput.addEventListener('focus', function() {
+                this.placeholder = 'Pregunta sobre créditos, auxilios, afiliación...';
+                charCounter.style.opacity = '1';
+            });
+
+            chatInput.addEventListener('blur', function() {
+                if (this.value.length === 0) {
+                    this.placeholder = 'Escribe tu consulta sobre COOGUARDPENAL...';
+                }
+                charCounter.style.opacity = '0.6';
+            });
+        }
+        
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+            
+            // Disable send button and show loading state
+            chatSend.disabled = true;
+            chatSend.innerHTML = '<span style="animation: spin 1s linear infinite;">⏳</span>';
+            
+            // Add user message
+            addMessage(message, 'user');
+            chatInput.value = '';
+            
+            // Show typing indicator
+            showTyping();
+            
+            // Simulate AI response
+            setTimeout(() => {
+                hideTyping();
+                handleAIResponse(message);
+                
+                // Re-enable send button
+                chatSend.disabled = false;
+                chatSend.innerHTML = '<span>📤</span>';
+            }, 1500 + Math.random() * 1000);
+        }
+        
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            
+            const timestamp = new Date().toLocaleTimeString('es-ES', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            if (sender === 'bot') {
+                messageDiv.innerHTML = `
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div class="message-text">${content}</div>
+                        <div class="message-time">${timestamp}</div>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        <div class="message-text">${content}</div>
+                        <div class="message-time">${timestamp}</div>
+                    </div>
+                    <div class="message-avatar">👤</div>
+                `;
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Add entrance animation
+            messageDiv.style.opacity = '0';
+            messageDiv.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                messageDiv.style.transition = 'all 0.3s ease';
+                messageDiv.style.opacity = '1';
+                messageDiv.style.transform = 'translateY(0)';
+            }, 50);
+        }
+        
+        function showTyping() {
+            typingIndicator.style.display = 'flex';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function hideTyping() {
+            typingIndicator.style.display = 'none';
+        }
+        
+        function showQuickActions() {
+            const quickActions = document.createElement('div');
+            quickActions.className = 'quick-actions';
+            quickActions.innerHTML = `
+                <div style="margin: var(--space-4) 0; font-size: var(--text-sm); color: var(--gray-600); text-align: center;">
+                    Consultas rápidas:
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4);">
+                    <button class="quick-btn" onclick="sendQuickMessage('¿Cómo me afilio?')">
+                        🎯 ¿Cómo me afilio?
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Información sobre créditos')">
+                        💰 Créditos
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('¿Qué auxilios ofrecen?')">
+                        🤝 Auxilios
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('Horarios de atención')">
+                        🕒 Horarios
+                    </button>
+                </div>
+            `;
+            chatMessages.appendChild(quickActions);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        window.sendQuickMessage = function(message) {
+            chatInput.value = message;
+            sendMessage();
+        }
+        
+        function handleAIResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+            let response = '';
+            
+            if (message.includes('afili') || message.includes('ingres') || message.includes('asociar')) {
+                response = `¡Excelente! 🎯 Para afiliarte a COOGUARDPENAL necesitas:
+                
+                ✅ Ser miembro activo o pensionado del sistema penitenciario
+                ✅ Cédula de ciudadanía
+                ✅ Certificado laboral vigente
+                ✅ Últimos 3 desprendibles de pago
+                
+                📞 Llámanos al (601) 3362834 o visítanos en la Carrera 5 #16-14 Of. 402
+                
+                ¿Te gustaría que te contacte un asesor?`;
+                
+            } else if (message.includes('credit') || message.includes('préstam') || message.includes('dinero')) {
+                response = `💰 ¡Tenemos excelentes opciones de crédito!
+                
+                🎓 **Créditos Educativos**: 0.8% mensual
+                • Aprobación inmediata
+                • Sin codeudor
+                • Hasta 60 meses
+                
+                💳 **Créditos Personales**: 1.2% mensual  
+                • Hasta $20.000.000
+                • Evaluación rápida
+                • Descuento por nómina
+                
+                ¿Cuál te interesa más?`;
+                
+            } else if (message.includes('auxilio') || message.includes('beneficio') || message.includes('ayuda')) {
+                response = `🤝 Nuestros auxilios incluyen:
+                
+                ⚖️ **Auxilios Jurídicos**: Asesoría legal 24/7
+                🛡️ **Auxilios Solidarios**: Por fallecimiento, incapacidad
+                👶 **Auxilios Especiales**: Maternidad, paternidad
+                💼 **Auxilio Funerario**: Cobertura completa
+                
+                Todos incluidos en tu afiliación. ¿Necesitas información específica?`;
+                
+            } else if (message.includes('horario') || message.includes('atención') || message.includes('ubicación')) {
+                response = `🏢 **Información de contacto:**
+                
+                📍 **Ubicación**: Carrera 5 #16-14 Of. 402, Edificio El Globo, Bogotá
+                🕒 **Horarios**: Lunes a Viernes, 8:00 AM - 5:00 PM
+                📞 **Teléfonos**: (601) 3362834 / 3362835
+                ✉️ **Email**: cooguarpenal78@gmail.com
+                
+                ¿Prefieres que te llamemos o visitarnos?`;
+                
+            } else if (message.includes('tasa') || message.includes('interés') || message.includes('costo')) {
+                response = `📊 **Nuestras tasas súper competitivas:**
+                
+                🎓 **Créditos Educativos**: 0.8% mensual
+                💰 **Créditos Personales**: 1.2% mensual
+                🏦 **Ahorros**: Hasta 8% EA
+                
+                ¡Las mejores del mercado! ¿Te interesa simular un crédito?`;
+                
+            } else if (message.includes('contacto') || message.includes('asesor') || message.includes('hablar')) {
+                response = `📞 ¡Perfecto! Te conectamos con un asesor:
+                
+                🚀 **Opciones de contacto inmediato:**
+                • WhatsApp: Click en el botón verde 💬
+                • Llamada directa: (601) 3362834
+                • Formulario: Sección "Contacto"
+                
+                💡 **Tip**: Por WhatsApp obtienes respuesta más rápida
+                
+                ¿Cuál prefieres?`;
+                
+            } else {
+                response = `Entiendo que necesitas información sobre "${userMessage}". 
+                
+                🎯 Te recomiendo contactar directamente a nuestros asesores especializados:
+                
+                📱 **WhatsApp**: Respuesta inmediata
+                📞 **Llamada**: (601) 3362834
+                ✉️ **Email**: cooguarpenal78@gmail.com
+                
+                O pregúntame sobre:
+                • Afiliaciones • Créditos • Auxilios • Horarios`;
+            }
+            
+            addMessage(response, 'bot');
+            
+            // Send to N8N webhook (placeholder - replace with real endpoint)
+            sendToN8N(userMessage, response);
+        }
+        
+        function sendToN8N(userMessage, botResponse) {
+            // Placeholder for N8N integration
+            const webhookURL = 'https://your-n8n-instance.com/webhook/chat-cooguardpenal';
+            
+            const payload = {
+                timestamp: new Date().toISOString(),
+                user_message: userMessage,
+                bot_response: botResponse,
+                session_id: 'session_' + Date.now(),
+                user_agent: navigator.userAgent
+            };
+            
+            // Uncomment when you have a real N8N webhook
+            /*
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            }).catch(error => {
+                console.log('N8N webhook not configured yet:', error);
+            });
+            */
+            
+            console.log('Chat data for N8N:', payload);
+        }
+        
+        // Close chat when clicking outside
+        document.addEventListener('click', (e) => {
+            if (chatOpen && !chatPanel.contains(e.target) && !chatToggle.contains(e.target)) {
+                chatOpen = false;
+                chatPanel.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{% extends 'website/base.html' %}
+{% block title %}Noticias - COOGUARDPENAL Ltda.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero section-sm">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in-down">
+                Noticias y <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Actualizaciones</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in">
+                Mantente informado sobre las últimas novedades, beneficios y actividades de nuestra cooperativa.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Noticias Destacadas -->
+<section class="section">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>Noticias Destacadas</h2>
+            <p class="lead" style="max-width: 600px; margin: 0 auto;">
+                Las últimas novedades de nuestra cooperativa
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-8" style="max-width: 800px; margin: 0 auto;">
+            <!-- Noticia Principal -->
+            <article class="card" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE);">
+                <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+                    <span style="background: var(--accent-500); color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600;">
+                        DESTACADA
+                    </span>
+                    <span style="color: var(--gray-500); font-size: var(--text-sm);">
+                        6 de noviembre de 2024
+                    </span>
+                </div>
+                <h3 style="color: var(--primary-800); margin-bottom: var(--space-4); font-size: var(--text-2xl);">
+                    🎉 35ª Asamblea General de Asociados - Resultados Exitosos
+                </h3>
+                <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-6);">
+                    Con gran éxito se realizó nuestra Asamblea General de Asociados en el Hotel DANN de Bogotá. 
+                    Los asociados hábiles participaron activamente en las decisiones importantes para el futuro 
+                    de nuestra cooperativa, ratificando el compromiso con la excelencia en el servicio.
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="/contacto/" class="btn btn-primary">
+                        📖 Leer Más
+                    </a>
+                    <div style="display: flex; gap: var(--space-2);">
+                        <span style="background: var(--primary-100); color: var(--primary-700); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-size: var(--text-xs);">
+                            Asamblea
+                        </span>
+                        <span style="background: var(--secondary-100); color: var(--secondary-700); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-size: var(--text-xs);">
+                            Resultados
+                        </span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Newsletter -->
+<section class="section section-gradient">
+    <div class="container text-center">
+        <h2 style="color: white; margin-bottom: var(--space-6);">¿Quieres recibir nuestras noticias?</h2>
+        <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+            Suscríbete para recibir las últimas noticias, eventos y beneficios directamente en tu correo.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="/contacto/" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-800);">
+                📧 Suscribirse
+            </a>
+            <a href="/portal/" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+                🚀 Acceder al Portal
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

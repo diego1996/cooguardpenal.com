@@ -1,0 +1,110 @@
+{% extends 'website/base.html' %}
+{% block title %}Servicios - COOGUARDPENAL Ltda.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero section-sm">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in-down">
+                Servicios <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Exclusivos</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in">
+                Descubre todos los beneficios financieros y servicios especializados que hemos diseñado pensando en ti y tu familia.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios Financieros -->
+<section class="section">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>Servicios Financieros</h2>
+            <p class="lead" style="max-width: 600px; margin: 0 auto;">
+                Soluciones crediticias con las mejores tasas del mercado
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-8">
+            <div class="card" id="creditos" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE);">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); color: white;">
+                        🎓
+                    </div>
+                    <h3 class="card-title">Créditos Educativos</h3>
+                </div>
+                <div style="background: var(--primary-50); padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                    <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--primary-700); text-align: center; margin-bottom: var(--space-2);">
+                        0.8%
+                    </div>
+                    <p style="text-align: center; color: var(--primary-600); font-weight: 600; margin: 0;">
+                        Tasa de interés mensual
+                    </p>
+                </div>
+                <p class="card-text">
+                    <strong>Características:</strong><br>
+                    • Aprobación inmediata<br>
+                    • Sin codeudor<br>
+                    • Descuento directo por nómina<br>
+                    • Para estudios propios o familiares<br>
+                    • Hasta 60 meses para pagar
+                </p>
+                <div style="margin-top: auto;">
+                    <a href="/contacto/" class="btn btn-primary" style="width: 100%; justify-content: center; display: flex;">
+                        💬 Solicitar Ahora
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card" style="background: linear-gradient(135deg, #F0FDF4, #DCFCE7);">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--secondary-600), var(--secondary-500)); color: white;">
+                        💰
+                    </div>
+                    <h3 class="card-title">Créditos Personales</h3>
+                </div>
+                <div style="background: var(--secondary-50); padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                    <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--secondary-700); text-align: center; margin-bottom: var(--space-2);">
+                        1.2%
+                    </div>
+                    <p style="text-align: center; color: var(--secondary-600); font-weight: 600; margin: 0;">
+                        Tasa de interés mensual
+                    </p>
+                </div>
+                <p class="card-text">
+                    <strong>Características:</strong><br>
+                    • Préstamos hasta $20.000.000<br>
+                    • Evaluación según capacidad de pago<br>
+                    • Descuento automático por nómina<br>
+                    • Para cualquier necesidad personal<br>
+                    • Plazo flexible de pago
+                </p>
+                <div style="margin-top: auto;">
+                    <a href="/contacto/" class="btn btn-secondary" style="width: 100%; justify-content: center; display: flex;">
+                        📋 Más Información
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final -->
+<section class="section section-gradient">
+    <div class="container text-center">
+        <h2 style="color: white; margin-bottom: var(--space-6);">¿Necesitas Más Información?</h2>
+        <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+            Nuestro equipo está listo para asesorarte y ayudarte a encontrar el servicio perfecto para ti.
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="/contacto/" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-800);">
+                📞 Hablar con un Asesor
+            </a>
+            <a href="/portal/" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
+                🚀 Acceder al Portal
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
