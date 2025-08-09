@@ -14,7 +14,7 @@
     WORKDIR /wheels
     
     # Copia únicamente requirements.txt y genera los wheels
-    COPY requirements-prod.txt requirements.txt
+    COPY requirements.txt requirements.txt
     RUN pip wheel --no-cache-dir --no-deps --wheel-dir . -r requirements.txt
     
     # ---------- Final stage ----------
