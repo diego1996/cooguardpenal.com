@@ -1,0 +1,235 @@
+{% extends 'website/base.html' %}
+{% block title %}Pre-registro - COOGUARDPENAL Ltda.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero section-sm" style="background: linear-gradient(135deg, var(--primary-900), var(--guard-blue)); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.6;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero-content text-center">
+            <h1 class="hero-title animate-fade-in-down" style="color: white; font-size: var(--text-4xl); margin-bottom: var(--space-6);">
+                🛡️ Pre-registro<br>
+                <span style="background: linear-gradient(135deg, var(--warning), #EAB308); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    COOGUARDPENAL
+                </span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in" style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); max-width: 600px; margin: 0 auto;">
+                Solicita tu afiliación a la cooperativa. Tu solicitud será revisada por nuestro equipo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Formulario de Registro -->
+<section class="section">
+    <div class="container">
+        <div class="grid grid-cols-2 gap-16">
+            <!-- Información -->
+            <div>
+                <div style="background: linear-gradient(135deg, var(--guard-blue), var(--primary-900)); color: white; padding: var(--space-8); border-radius: var(--radius-2xl); margin-bottom: var(--space-8); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+                    <h2 style="color: white; margin-bottom: var(--space-6); font-size: var(--text-2xl);">
+                        🎯 Proceso de Afiliación
+                    </h2>
+                    <div style="space-y: var(--space-4);">
+                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
+                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">1</div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: var(--space-1);">Pre-registro</h4>
+                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Completa el formulario con tus datos básicos</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
+                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">2</div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: var(--space-1);">Revisión</h4>
+                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Nuestro equipo verifica tu información</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: var(--space-3); margin-bottom: var(--space-4);">
+                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">3</div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: var(--space-1);">Aprobación</h4>
+                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Recibes confirmación por email</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: var(--warning); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-900); flex-shrink: 0;">4</div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: var(--space-1);">¡Bienvenido!</h4>
+                                <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--text-sm);">Acceso completo al portal y beneficios</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--primary-50); padding: var(--space-6); border-radius: var(--radius-xl); border-left: 4px solid var(--success);">
+                    <h3 style="color: var(--primary-900); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
+                        ℹ️ Requisitos Básicos
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: var(--gray-700);">
+                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Ser miembro activo o pensionado del sistema penitenciario</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Tener cédula de ciudadanía vigente</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2);">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Proporcionar información de contacto actualizada</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div>
+                <div style="background: linear-gradient(135deg, var(--warning), #EAB308); padding: var(--space-2); border-radius: var(--radius-2xl); margin-bottom: var(--space-6);">
+                    <h2 style="color: var(--primary-900); margin: 0; padding: var(--space-4); text-align: center; font-size: var(--text-2xl); font-weight: 700;">
+                        📝 Formulario de Pre-registro
+                    </h2>
+                </div>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div style="background: {% if message.tags == 'success' %}var(--success){% elif message.tags == 'error' %}var(--error){% else %}var(--warning){% endif %}; color: white; padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="post" class="card" style="background: white; padding: var(--space-8); border: 2px solid var(--guard-blue);">
+                    {% csrf_token %}
+                    
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                            📧 Correo Electrónico *
+                        </label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                {{ form.email.errors.0 }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                            🆔 Número de Cédula *
+                        </label>
+                        {{ form.cedula }}
+                        {% if form.cedula.errors %}
+                            <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                {{ form.cedula.errors.0 }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-6);">
+                        <div>
+                            <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                                👤 Nombres *
+                            </label>
+                            {{ form.nombres }}
+                            {% if form.nombres.errors %}
+                                <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                    {{ form.nombres.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                                👤 Apellidos *
+                            </label>
+                            {{ form.apellidos }}
+                            {% if form.apellidos.errors %}
+                                <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                    {{ form.apellidos.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                            📱 Teléfono
+                        </label>
+                        {{ form.telefono }}
+                    </div>
+
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                            🏢 Lugar de Trabajo
+                        </label>
+                        {{ form.lugar_trabajo }}
+                    </div>
+
+                    <div style="margin-bottom: var(--space-6);">
+                        <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                            💼 Cargo
+                        </label>
+                        {{ form.cargo }}
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-8);">
+                        <div>
+                            <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                                🔐 Contraseña *
+                            </label>
+                            {{ form.password1 }}
+                            {% if form.password1.errors %}
+                                <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                    {{ form.password1.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: var(--space-2); font-weight: 700; color: var(--primary-900);">
+                                🔐 Confirmar Contraseña *
+                            </label>
+                            {{ form.password2 }}
+                            {% if form.password2.errors %}
+                                <div style="color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);">
+                                    {{ form.password2.errors.0 }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; background: linear-gradient(135deg, var(--guard-blue), var(--primary-900)); border: none; font-weight: 700; font-size: var(--text-lg);">
+                        ✨ Enviar Pre-registro
+                    </button>
+
+                    <div style="text-align: center; margin-top: var(--space-6);">
+                        <p style="color: var(--gray-600); margin-bottom: var(--space-2);">¿Ya tienes cuenta?</p>
+                        <a href="{% url 'accounts:login' %}" style="color: var(--guard-blue); font-weight: 600; text-decoration: none;">
+                            🔐 Inicia sesión aquí
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.form-control {
+    width: 100%;
+    padding: var(--space-3);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    transition: var(--transition-all);
+    font-family: var(--font-sans);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--guard-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: translateY(-1px);
+}
+</style>
+{% endblock %}

@@ -32,11 +32,11 @@
 <section class="section section-security">
     <div class="container" style="position: relative; z-index: 2;">
         <div class="text-center" style="margin-bottom: var(--space-16);">
-            <div style="display: inline-flex; align-items: center; gap: var(--space-3); background: linear-gradient(135deg, var(--guard-blue), var(--guard-navy)); color: white; padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);">
+            <div style="display: inline-flex; align-items: center; gap: var(--space-3); background: linear-gradient(135deg, var(--info), var(--primary-900)); color: white; padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);">
                 <span style="font-size: var(--text-2xl);">🛡️</span>
                 <span style="font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 1px;">Beneficios Exclusivos</span>
             </div>
-            <h2 style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--guard-navy), var(--guard-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            <h2 style="margin-bottom: var(--space-4); background: linear-gradient(135deg, var(--primary-900), var(--info)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
                 Privilegios Únicos para Guardias y Pensionados
             </h2>
             <p class="lead" style="max-width: 600px; margin: 0 auto; color: var(--gray-600);">
@@ -45,96 +45,103 @@
         </div>
         
         <div class="grid grid-auto gap-8">
-            <div class="card" style="border: 2px solid var(--guard-blue); background: linear-gradient(135deg, #F8FAFC, #F1F5F9); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -10px; right: -10px; width: 40px; height: 40px; background: linear-gradient(135deg, var(--guard-gold), #EAB308); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); animation: pulse 2s infinite;">
-                    <span style="font-size: 12px;">⭐</span>
-                </div>
+            <!-- Tarjeta Premium: Créditos Educativos -->
+            <div class="card card-premium">
                 <div class="card-header">
-                    <div class="card-icon" style="background: linear-gradient(135deg, var(--guard-blue), var(--guard-navy)); color: white; box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);">
-                        🎓
-                    </div>
-                    <h3 class="card-title" style="color: var(--guard-navy);">Créditos Educativos al 0.8%</h3>
-                    <div style="background: linear-gradient(135deg, var(--guard-emerald), #059669); color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: var(--space-2);">
-                        ⚡ Aprobación Inmediata
-                    </div>
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Créditos Educativos al 0.8%</h3>
+                    <div class="card-badge">⚡ Aprobación Inmediata</div>
                 </div>
-                <p class="card-text" style="color: var(--gray-700);">
-                    <strong style="color: var(--guard-navy);">La tasa más baja del mercado</strong> para tu educación y la de tu familia. 
+                
+                <p class="card-text">
+                    <strong>La tasa más baja del mercado</strong> para tu educación y la de tu familia. 
                     Sin codeudor, sin papeleos complicados, con respuesta inmediata.
                 </p>
-                <div style="background: linear-gradient(135deg, var(--guard-blue), var(--guard-navy)); color: white; padding: var(--space-3); border-radius: var(--radius-lg); margin: var(--space-4) 0;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                            <div style="font-size: var(--text-2xl); font-weight: 800;">0.8%</div>
-                            <div style="font-size: var(--text-xs); opacity: 0.9;">Mensual</div>
-                        </div>
-                        <div style="text-align: right;">
-                            <div style="font-size: var(--text-lg); font-weight: 700;">60 meses</div>
-                            <div style="font-size: var(--text-xs); opacity: 0.9;">Plazo máximo</div>
-                        </div>
+                
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value">0.8%</div>
+                        <div class="card-stat-label">Mensual</div>
+                    </div>
+                    <div class="card-stat">
+                        <div class="card-stat-value">60</div>
+                        <div class="card-stat-label">Meses Máx.</div>
                     </div>
                 </div>
-                <div style="margin-top: auto;">
-                    <a href="/servicios/#creditos" class="btn btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, var(--guard-gold), #EAB308); border: none; color: var(--guard-navy); font-weight: 700;">
+                
+                <div class="card-cta">
+                    <a href="/servicios/#creditos" class="btn btn-primary" style="width: 100%;">
                         💡 Solicitar Ahora
                     </a>
                 </div>
             </div>
             
-            <div class="card" style="border: 2px solid var(--guard-gold); background: linear-gradient(135deg, #FFFBEB, #FEF3C7); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -5px; left: -5px; background: linear-gradient(135deg, var(--guard-crimson), #DC2626); color: white; padding: var(--space-1) var(--space-2); border-radius: 0 0 var(--radius-lg) 0; font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
-                    🔥 Popular
-                </div>
+            <!-- Tarjeta Popular: Auxilios Jurídicos -->
+            <div class="card card-popular">
                 <div class="card-header">
-                    <div class="card-icon" style="background: linear-gradient(135deg, var(--guard-gold), #EAB308); color: white; box-shadow: 0 8px 16px rgba(245, 158, 11, 0.4);">
-                        ⚖️
-                    </div>
-                    <h3 class="card-title" style="color: var(--guard-bronze);">Auxilios Jurídicos</h3>
-                    <div style="background: linear-gradient(135deg, var(--guard-navy), var(--guard-blue)); color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: var(--space-2);">
-                        🛡️ Cobertura 24/7
-                    </div>
+                    <div class="card-icon">⚖️</div>
+                    <h3 class="card-title">Auxilios Jurídicos</h3>
+                    <div class="card-badge badge-info">🛡️ Cobertura 24/7</div>
                 </div>
-                <p class="card-text" style="color: var(--gray-700);">
-                    <strong style="color: var(--guard-bronze);">Protección legal completa</strong> para ti y tu familia. 
+                
+                <p class="card-text">
+                    <strong>Protección legal completa</strong> para ti y tu familia. 
                     Abogados especializados en derecho penal y laboral a tu disposición las 24 horas.
                 </p>
-                <div style="background: var(--guard-silver); padding: var(--space-3); border-radius: var(--radius-lg); margin: var(--space-4) 0; border-left: 4px solid var(--guard-gold);">
-                    <ul style="list-style: none; padding: 0; margin: 0; color: var(--gray-700);">
-                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);">
-                            <span style="color: var(--guard-emerald);">✅</span>
-                            <span style="font-size: var(--text-sm); font-weight: 600;">Asesoría jurídica ilimitada</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-1);">
-                            <span style="color: var(--guard-emerald);">✅</span>
-                            <span style="font-size: var(--text-sm); font-weight: 600;">Representación en procesos</span>
-                        </li>
-                        <li style="display: flex; align-items: center; gap: var(--space-2);">
-                            <span style="color: var(--guard-emerald);">✅</span>
-                            <span style="font-size: var(--text-sm); font-weight: 600;">Atención 24 horas</span>
-                        </li>
-                    </ul>
-                </div>
-                <div style="margin-top: auto;">
-                    <a href="/servicios/#juridicos" class="btn btn-secondary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, var(--guard-bronze), #92400E); border: none; color: white; font-weight: 700;">
+                
+                <ul class="card-features">
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Asesoría jurídica ilimitada</span>
+                    </li>
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Representación en procesos</span>
+                    </li>
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Atención 24 horas</span>
+                    </li>
+                </ul>
+                
+                <div class="card-cta">
+                    <a href="/servicios/#juridicos" class="btn btn-secondary" style="width: 100%;">
                         ⚖️ Ver Cobertura
                     </a>
                 </div>
             </div>
             
+            <!-- Tarjeta Estándar: Auxilios Solidarios -->
             <div class="card">
                 <div class="card-header">
-                    <div class="card-icon" style="background: linear-gradient(135deg, #FEF3C7, #FDE68A);">
-                        🤝
-                    </div>
+                    <div class="card-icon">🤝</div>
                     <h3 class="card-title">Auxilios Solidarios</h3>
+                    <div class="card-badge badge-warning">🌟 Solidaridad</div>
                 </div>
+                
                 <p class="card-text">
                     Red de apoyo mutuo entre asociados, auxilios de paternidad/maternidad y beneficios 
                     solidarios en momentos de necesidad.
                 </p>
-                <div style="margin-top: auto;">
-                    <a href="/servicios/#auxilios" class="btn btn-outline">
-                        Conocer Más →
+                
+                <ul class="card-features">
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Auxilio de paternidad/maternidad</span>
+                    </li>
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Red de apoyo mutuo</span>
+                    </li>
+                    <li class="card-feature">
+                        <span class="card-feature-icon">✅</span>
+                        <span>Beneficios por solidaridad</span>
+                    </li>
+                </ul>
+                
+                <div class="card-cta">
+                    <a href="/servicios/#auxilios" class="btn btn-outline" style="width: 100%;">
+                        🤝 Conocer Más
                     </a>
                 </div>
             </div>
@@ -153,42 +160,42 @@
         </div>
         
         <div class="grid grid-cols-4 gap-8">
-            <div class="card text-center" style="border: none; background: white;">
-                <div style="font-size: var(--text-6xl); font-weight: 700; color: var(--primary-700); margin-bottom: var(--space-4); font-family: var(--font-serif);">
+            <div class="card card-stat-premium card-stat-experience text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
                     35+
                 </div>
-                <h3 style="color: var(--gray-900); margin-bottom: var(--space-2);">Años de Experiencia</h3>
-                <p style="color: var(--gray-600); margin: 0;">
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Años de Experiencia</h3>
+                <p class="card-text" style="margin: 0;">
                     Más de tres décadas sirviendo a la comunidad penitenciaria con excelencia.
                 </p>
             </div>
             
-            <div class="card text-center" style="border: none; background: white;">
-                <div style="font-size: var(--text-6xl); font-weight: 700; color: var(--secondary-700); margin-bottom: var(--space-4); font-family: var(--font-serif);">
+            <div class="card card-stat-premium card-stat-members text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
                     5,000+
                 </div>
-                <h3 style="color: var(--gray-900); margin-bottom: var(--space-2);">Asociados Activos</h3>
-                <p style="color: var(--gray-600); margin: 0;">
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Asociados Activos</h3>
+                <p class="card-text" style="margin: 0;">
                     Una gran familia de guardias y pensionados que confían en nosotros.
                 </p>
             </div>
             
-            <div class="card text-center" style="border: none; background: white;">
-                <div style="font-size: var(--text-6xl); font-weight: 700; color: var(--accent-700); margin-bottom: var(--space-4); font-family: var(--font-serif);">
+            <div class="card card-stat-premium card-stat-satisfaction text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
                     98%
                 </div>
-                <h3 style="color: var(--gray-900); margin-bottom: var(--space-2);">Satisfacción</h3>
-                <p style="color: var(--gray-600); margin: 0;">
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Satisfacción</h3>
+                <p class="card-text" style="margin: 0;">
                     Nuestros asociados califican nuestro servicio como excelente.
                 </p>
             </div>
             
-            <div class="card text-center" style="border: none; background: white;">
-                <div style="font-size: var(--text-6xl); font-weight: 700; color: var(--primary-600); margin-bottom: var(--space-4); font-family: var(--font-serif);">
+            <div class="card card-stat-premium card-stat-support text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
                     24/7
                 </div>
-                <h3 style="color: var(--gray-900); margin-bottom: var(--space-2);">Soporte Online</h3>
-                <p style="color: var(--gray-600); margin: 0;">
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Soporte Online</h3>
+                <p class="card-text" style="margin: 0;">
                     Portal disponible las 24 horas para gestionar tus servicios.
                 </p>
             </div>
@@ -379,22 +386,71 @@
     </div>
 </section>
 
-<!-- Llamada a la Acción Final -->
-<section class="section section-alt">
+<!-- Llamada a la Acción Final Espectacular -->
+<section class="section-cta-final">
     <div class="container">
-        <div class="text-center">
-            <h2 style="margin-bottom: var(--space-6);">¿Listo para ser parte de nuestra familia?</h2>
-            <p style="font-size: var(--text-xl); color: var(--gray-600); margin-bottom: var(--space-8); max-width: 700px; margin-left: auto; margin-right: auto;">
-                Únete a miles de guardias y pensionados que ya disfrutan de los beneficios exclusivos de COOGUARDPENAL. 
-                Tu futuro financiero comienza aquí.
-            </p>
-            <div class="flex justify-center gap-4 flex-wrap">
-                <a href="/portal/" class="btn btn-primary btn-lg">
-                    🚀 Crear Cuenta Ahora
+        <div class="cta-final-content">
+            <!-- Decoración Superior -->
+            <div class="cta-final-decoration">
+                <div class="cta-decoration-icon">🏛️</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">⚖️</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">🛡️</div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="cta-final-header">
+                <h2 class="cta-final-title">
+                    ¿Listo para ser parte de nuestra 
+                    <span class="title-highlight">familia cooperativa</span>?
+                </h2>
+                <div class="cta-final-subtitle">
+                    Únete a <strong>miles de guardias y pensionados</strong> que ya disfrutan de los 
+                    beneficios exclusivos de COOGUARDPENAL. Tu futuro financiero comienza aquí.
+                </div>
+            </div>
+
+            <!-- Estadísticas Rápidas -->
+            <div class="cta-stats-mini">
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">35+</div>
+                    <div class="cta-stat-label">Años</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">5K+</div>
+                    <div class="cta-stat-label">Asociados</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">98%</div>
+                    <div class="cta-stat-label">Satisfacción</div>
+                </div>
+            </div>
+
+            <!-- Botones de Acción Premium -->
+            <div class="cta-final-actions">
+                <a href="{% url 'accounts:register' %}" class="btn-cta-primary">
+                    <span class="btn-cta-icon">✨</span>
+                    <span class="btn-cta-text">Crear Cuenta Ahora</span>
+                    <span class="btn-cta-shine"></span>
                 </a>
-                <a href="/contacto/" class="btn btn-outline btn-lg">
-                    📞 Hablar con un Asesor
+                
+                <a href="/contacto/" class="btn-cta-secondary">
+                    <span class="btn-cta-icon">📞</span>
+                    <span class="btn-cta-text">Hablar con un Asesor</span>
+                    <span class="btn-cta-pulse"></span>
                 </a>
+            </div>
+
+            <!-- Badge de Seguridad -->
+            <div class="cta-security-badge">
+                <div class="security-badge-icon">🔐</div>
+                <div class="security-badge-text">
+                    <strong>100% Seguro</strong><br>
+                    <small>Información protegida y verificada</small>
+                </div>
             </div>
         </div>
     </div>
