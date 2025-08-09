@@ -2,17 +2,119 @@
 {% block title %}Noticias - COOGUARDPENAL Ltda.{% endblock %}
 
 {% block content %}
-<!-- Hero Section Espectacular -->
-<section class="hero section-sm" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; opacity: 0.6;"></div>
+<!-- Hero Section Noticias Centro de Información Dinámico -->
+<section class="hero-news-center" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; margin-top: var(--space-8); margin-bottom: var(--space-16); padding: var(--space-16) 0;">
+    <!-- Patrón de fondo de noticias dinámico -->
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%), linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%); background-size: 60px 60px; opacity: 0.3;"></div>
+    
+    <!-- Decoraciones noticiosas flotantes -->
+    <div style="position: absolute; top: 20%; left: 12%; width: 90px; height: 90px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; animation: float 4s ease-in-out infinite; transform: rotate(15deg);">📰</div>
+    <div style="position: absolute; top: 15%; right: 8%; width: 70px; height: 70px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; animation: float 6s ease-in-out infinite reverse;">📡</div>
+    <div style="position: absolute; bottom: 30%; left: 8%; width: 85px; height: 85px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2rem; animation: float 5s ease-in-out infinite; transform: rotate(-10deg);">🎯</div>
+    <div style="position: absolute; bottom: 15%; right: 15%; width: 75px; height: 75px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.9rem; animation: float 7s ease-in-out infinite reverse; transform: rotate(8deg);">⚡</div>
+
     <div class="container" style="position: relative; z-index: 2;">
-        <div class="hero-content text-center">
-            <h1 class="hero-title animate-fade-in-down" style="color: white; font-size: var(--text-5xl); margin-bottom: var(--space-6); text-shadow: 0 4px 20px rgba(0,0,0,0.3);">
-                📰 Noticias y <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Actualizaciones</span>
-            </h1>
-            <p class="hero-subtitle animate-fade-in" style="color: rgba(255,255,255,0.9); font-size: var(--text-xl); max-width: 700px; margin: 0 auto;">
-                Mantente al día con las últimas novedades, beneficios exclusivos y eventos importantes de COOGUARDPENAL.
-            </p>
+        <div class="grid grid-cols-2 gap-16 items-center">
+            <!-- Contenido Principal (Izquierda) -->
+            <div class="hero-content-news">
+                <!-- Badge superior informativo -->
+                <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1)); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.3); padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); animation: fadeInDown 1s ease-out;">
+                    <span style="color: #60A5FA; font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 1px;">
+                        🔥 En Vivo • Siempre Actualizado
+                    </span>
+                </div>
+
+                <h1 style="color: white; font-size: var(--text-6xl); font-weight: 900; line-height: 1.1; margin-bottom: var(--space-6); animation: fadeInUp 1s ease-out 0.2s both;">
+                    Centro de<br>
+                    <span style="background: linear-gradient(135deg, #60A5FA, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative;">
+                        Información
+                        <span style="position: absolute; bottom: -4px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #60A5FA, #3B82F6); border-radius: 2px; opacity: 0.7;"></span>
+                    </span>
+                </h1>
+
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-xl); line-height: 1.6; margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.4s both;">
+                    Mantente <strong style="color: #60A5FA;">conectado</strong> con las últimas novedades, 
+                    beneficios exclusivos y eventos importantes. <strong style="color: white;">Tu fuente confiable</strong> 
+                    de información cooperativa.
+                </p>
+
+                <!-- Estadísticas de noticias en línea -->
+                <div style="display: flex; gap: var(--space-8); margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.6s both;">
+                    <div style="text-align: center;">
+                        <div style="color: #60A5FA; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">24/7</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Cobertura</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="color: #60A5FA; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">🔥</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Trending</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="color: #60A5FA; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">📈</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Actualizado</div>
+                    </div>
+                </div>
+
+                <!-- Botones de acción dinámicos -->
+                <div style="display: flex; gap: var(--space-4); animation: fadeInUp 1s ease-out 0.8s both;">
+                    <a href="#noticias-destacadas" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white; padding: var(--space-4) var(--space-8); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);">
+                        <span>🚀</span>
+                        <span>Últimas Noticias</span>
+                    </a>
+                    <a href="#eventos" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2); color: white; padding: var(--space-4) var(--space-8); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                        <span>📅</span>
+                        <span>Eventos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panel de Noticias en Vivo (Derecha) -->
+            <div class="news-live-panel" style="animation: fadeInRight 1s ease-out 0.5s both;">
+                <!-- Marco principal de noticias en vivo -->
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-3xl); padding: var(--space-8); position: relative; overflow: hidden;">
+                    <!-- Brillo superior -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);"></div>
+                    
+                    <!-- Header del panel -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-6);">
+                        <h3 style="color: white; font-size: var(--text-xl); font-weight: 700; margin: 0;">
+                            🔴 En Vivo
+                        </h3>
+                        <div style="background: rgba(59, 130, 246, 0.2); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); color: #60A5FA; font-size: var(--text-xs); font-weight: 600;">
+                            LIVE
+                        </div>
+                    </div>
+
+                    <!-- Noticias rápidas simuladas -->
+                    <div style="space-y: var(--space-4);">
+                        <div style="border-left: 3px solid #3B82F6; padding-left: var(--space-4); margin-bottom: var(--space-4);">
+                            <div style="color: #60A5FA; font-size: var(--text-xs); font-weight: 600; margin-bottom: var(--space-1);">HACE 5 MIN</div>
+                            <div style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm); line-height: 1.4;">Nuevas tasas preferenciales disponibles para asociados activos</div>
+                        </div>
+                        
+                        <div style="border-left: 3px solid #10B981; padding-left: var(--space-4); margin-bottom: var(--space-4);">
+                            <div style="color: #34D399; font-size: var(--text-xs); font-weight: 600; margin-bottom: var(--space-1);">HACE 15 MIN</div>
+                            <div style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm); line-height: 1.4;">Próximo evento: Asamblea General Ordinaria 2025</div>
+                        </div>
+                        
+                        <div style="border-left: 3px solid #F59E0B; padding-left: var(--space-4);">
+                            <div style="color: #FBBF24; font-size: var(--text-xs); font-weight: 600; margin-bottom: var(--space-1);">HACE 1 HORA</div>
+                            <div style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm); line-height: 1.4;">Lanzamiento del nuevo portal digital</div>
+                        </div>
+                    </div>
+
+                    <!-- Categorías rápidas -->
+                    <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="text-align: center; margin-bottom: var(--space-4);">
+                            <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 600;">Categorías Populares</div>
+                        </div>
+                        <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center;">
+                            <span style="background: rgba(59, 130, 246, 0.2); color: #60A5FA; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600;"># Servicios</span>
+                            <span style="background: rgba(16, 185, 129, 0.2); color: #34D399; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600;"># Eventos</span>
+                            <span style="background: rgba(245, 158, 11, 0.2); color: #FBBF24; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600;"># Beneficios</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

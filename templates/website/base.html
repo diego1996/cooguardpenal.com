@@ -487,6 +487,33 @@
             transform: scale(1.1);
         }
 
+        /* Estado Activo del Menú */
+        .nav-link.active {
+            color: white !important;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)) !important;
+            border-color: rgba(245, 158, 11, 0.5) !important;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .nav-link.active .nav-icon {
+            opacity: 1 !important;
+            transform: scale(1.15) !important;
+            color: #FBBF24 !important;
+        }
+
+        .nav-link.active .nav-text {
+            font-weight: 700 !important;
+            color: white !important;
+        }
+
+        .nav-link.active::after {
+            width: 100% !important;
+            background: linear-gradient(90deg, #FBBF24, #F59E0B) !important;
+            height: 3px !important;
+            opacity: 1 !important;
+        }
+
         .nav-text {
             font-size: var(--text-sm);
             font-weight: 600;
@@ -2671,6 +2698,352 @@
             font-size: var(--text-xs);
         }
 
+        /* =================== ELEMENTOS ESPECÍFICOS DE SERVICIOS =================== */
+        .card-rate-highlight {
+            background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+            color: var(--white);
+            padding: var(--space-6);
+            border-radius: var(--radius-2xl);
+            text-align: center;
+            margin-bottom: var(--space-6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-rate-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .rate-number {
+            font-size: var(--text-6xl);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: var(--space-2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .rate-label {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-1);
+            opacity: 0.9;
+        }
+
+        .rate-description {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .card-features {
+            margin-bottom: var(--space-6);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--primary-100);
+            transition: var(--transition-all);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-item:hover {
+            background: var(--primary-50);
+            margin: 0 calc(-1 * var(--space-4));
+            padding-left: var(--space-4);
+            padding-right: var(--space-4);
+            border-radius: var(--radius-lg);
+        }
+
+        .feature-icon {
+            font-size: var(--text-lg);
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: var(--text-base);
+            font-weight: 500;
+            color: var(--primary-700);
+            line-height: 1.4;
+        }
+
+        /* =================== ELEMENTOS ESPECÍFICOS DE HISTORIA =================== */
+        .history-timeline {
+            position: relative;
+            margin-bottom: var(--space-12);
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--secondary-500), var(--secondary-400), var(--secondary-600));
+            border-radius: var(--radius-full);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: var(--space-20);
+            margin-bottom: var(--space-8);
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: var(--text-sm);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+            border: 4px solid var(--white);
+            z-index: 2;
+        }
+
+        .timeline-content h4 {
+            font-family: var(--font-sans);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--primary-900);
+            margin-bottom: var(--space-3);
+        }
+
+        .timeline-content p {
+            color: var(--primary-600);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .history-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-4);
+            margin-top: var(--space-8);
+        }
+
+        /* =================== ELEMENTS ESPECÍFICOS DE VALORES =================== */
+        .value-card {
+            position: relative;
+            transition: var(--transition-all);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .value-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .value-title {
+            font-family: var(--font-sans);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary-900);
+        }
+
+        .value-text {
+            color: var(--primary-600);
+            line-height: 1.6;
+            margin: 0 0 var(--space-6) 0;
+            flex-grow: 1;
+        }
+
+        .value-accent {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            opacity: 0;
+            transition: var(--transition-all);
+        }
+
+        .value-card:hover .value-accent {
+            opacity: 1;
+        }
+
+        /* Variantes de color para valores */
+        .value-primary .value-icon {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+        }
+
+        .value-primary .value-accent {
+            background: linear-gradient(180deg, var(--primary-500), var(--primary-600));
+        }
+
+        .value-secondary .value-icon {
+            background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+        }
+
+        .value-secondary .value-accent {
+            background: linear-gradient(180deg, var(--secondary-500), var(--secondary-600));
+        }
+
+        .value-success .value-icon {
+            background: linear-gradient(135deg, var(--success), #059669);
+        }
+
+        .value-success .value-accent {
+            background: linear-gradient(180deg, var(--success), #059669);
+        }
+
+        .value-info .value-icon {
+            background: linear-gradient(135deg, var(--info), var(--primary-600));
+        }
+
+        .value-info .value-accent {
+            background: linear-gradient(180deg, var(--info), var(--primary-600));
+        }
+
+        /* =================== ELEMENTOS ORGANIZACIONALES =================== */
+        .organizational-card {
+            position: relative;
+            transition: var(--transition-all);
+        }
+
+        .organizational-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .organizational-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-4xl);
+            margin: 0 auto var(--space-6);
+            color: var(--white);
+            transition: var(--transition-all);
+            border: 4px solid var(--white);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .organizational-card:hover .organizational-icon {
+            transform: scale(1.1);
+        }
+
+        .organizational-primary {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+        }
+
+        .organizational-secondary {
+            background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+        }
+
+        .organizational-success {
+            background: linear-gradient(135deg, var(--success), #059669);
+        }
+
+        .organizational-title {
+            font-family: var(--font-sans);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--primary-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .organizational-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: var(--white);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+        }
+
+        .organizational-badge-secondary {
+            background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+        }
+
+        .organizational-badge-success {
+            background: linear-gradient(135deg, var(--success), #059669);
+        }
+
+        .organizational-text {
+            color: var(--primary-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-6);
+        }
+
+        .organizational-stats {
+            margin-top: var(--space-6);
+        }
+
+        .org-stat {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .org-stat-value {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: var(--secondary-600);
+            line-height: 1;
+            margin-bottom: var(--space-1);
+        }
+
+        .org-stat-label {
+            font-size: var(--text-sm);
+            color: var(--primary-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         /* =================== RESPONSIVE DESIGN =================== */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -3205,6 +3578,62 @@
                 }
             });
         });
+
+        // =================== NAVEGACIÓN ACTIVA INTELIGENTE ===================
+        function setActiveNavigation() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Primero removemos todas las clases activas
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Definimos las rutas y sus elementos correspondientes
+            const routeMap = {
+                '/': 'inicio',
+                '/servicios/': 'servicios', 
+                '/nosotros/': 'nosotros',
+                '/noticias/': 'noticias',
+                '/contacto/': 'contacto'
+            };
+            
+            // Función para activar link basado en texto
+            function activateNavByText(text) {
+                navLinks.forEach(link => {
+                    const navText = link.querySelector('.nav-text');
+                    if (navText && navText.textContent.toLowerCase() === text) {
+                        link.classList.add('active');
+                        console.log('🎯 Página activa:', text.toUpperCase());
+                    }
+                });
+            }
+            
+            // Detectar página actual
+            if (routeMap[currentPath]) {
+                activateNavByText(routeMap[currentPath]);
+            } else {
+                // Para rutas que contengan las palabras clave
+                if (currentPath.includes('/servicios')) {
+                    activateNavByText('servicios');
+                } else if (currentPath.includes('/nosotros')) {
+                    activateNavByText('nosotros');
+                } else if (currentPath.includes('/noticias')) {
+                    activateNavByText('noticias');
+                } else if (currentPath.includes('/contacto')) {
+                    activateNavByText('contacto');
+                } else {
+                    // Por defecto activamos inicio
+                    activateNavByText('inicio');
+                }
+            }
+        }
+        
+        // Activar navegación al cargar la página
+        document.addEventListener('DOMContentLoaded', setActiveNavigation);
+        
+        // Activar navegación al cambiar página (para SPAs futuras)
+        window.addEventListener('popstate', setActiveNavigation);
 
         // Intersection Observer for animations
         const observerOptions = {

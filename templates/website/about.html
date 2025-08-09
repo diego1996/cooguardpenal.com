@@ -2,223 +2,484 @@
 {% block title %}Sobre Nosotros - COOGUARDPENAL Ltda.{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero section-sm">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title animate-fade-in-down">
-                Sobre <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">COOGUARDPENAL</span>
-            </h1>
-            <p class="hero-subtitle animate-fade-in">
-                35 años de compromiso con el bienestar de la Guardia y los Pensionados del Sistema Penitenciario y Carcelario Colombiano.
-            </p>
+<!-- Hero Section Institucional Único -->
+<section class="hero-institutional" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; margin-top: var(--space-8); margin-bottom: var(--space-16); padding: var(--space-16) 0;">
+    <!-- Patrón de fondo institucional -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 25% 25%, rgba(245, 158, 11, 0.1) 2px, transparent 2px), radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.05) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.7;"></div>
+    
+    <!-- Decoración con escudos -->
+    <div style="position: absolute; top: 20%; left: 10%; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; animation: float 6s ease-in-out infinite;">🛡️</div>
+    <div style="position: absolute; top: 60%; right: 15%; width: 60px; height: 60px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; animation: float 8s ease-in-out infinite reverse;">⚖️</div>
+    <div style="position: absolute; bottom: 20%; left: 20%; width: 70px; height: 70px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; animation: float 7s ease-in-out infinite;">🏛️</div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="grid grid-cols-2 gap-16 items-center">
+            <!-- Contenido Principal -->
+            <div class="hero-content-institutional">
+                <!-- Badge superior -->
+                <div style="display: inline-flex; align-items: center; background: rgba(245, 158, 11, 0.2); backdrop-filter: blur(10px); border: 1px solid rgba(245, 158, 11, 0.3); padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); animation: fadeInDown 1s ease-out;">
+                    <span style="color: #FCD34D; font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 1px;">
+                        🏆 Desde 1989 • Institución Sólida
+                    </span>
+                </div>
+
+                <h1 style="color: white; font-size: var(--text-6xl); font-weight: 800; line-height: 1.1; margin-bottom: var(--space-6); animation: fadeInUp 1s ease-out 0.2s both;">
+                    Nuestra <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative;">Historia<span style="position: absolute; bottom: -4px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #FCD34D, #F59E0B); border-radius: 2px; opacity: 0.6;"></span></span><br>
+                    de Compromiso
+                </h1>
+
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-xl); line-height: 1.6; margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.4s both;">
+                    Desde <strong style="color: #FCD34D;">1989</strong>, hemos sido la cooperativa de confianza para la 
+                    <strong style="color: white;">Guardia Penitenciaria y Pensionados de Colombia</strong>. 
+                    Una historia construida con valores sólidos, transparencia y resultados excepcionales.
+                </p>
+
+                <!-- Mini estadísticas en línea -->
+                <div style="display: flex; gap: var(--space-8); margin-bottom: var(--space-8); animation: fadeInUp 1s ease-out 0.6s both;">
+                    <div style="text-align: center;">
+                        <div style="color: #FCD34D; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">1989</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Fundación</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="color: #FCD34D; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">35+</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Años</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="color: #FCD34D; font-size: var(--text-3xl); font-weight: 800; line-height: 1;">5K+</div>
+                        <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); font-weight: 500;">Asociados</div>
+                    </div>
+                </div>
+
+                <!-- Botones de acción únicos -->
+                <div style="display: flex; gap: var(--space-4); animation: fadeInUp 1s ease-out 0.8s both;">
+                    <a href="#nuestra-historia" style="background: linear-gradient(135deg, #059669, #10B981); color: white; padding: var(--space-4) var(--space-8); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all); transform: translateY(0); box-shadow: var(--shadow-xl);">
+                        <span>📜</span>
+                        <span>Nuestra Trayectoria</span>
+                    </a>
+                    <a href="#valores" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2); color: white; padding: var(--space-4) var(--space-8); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                        <span>💎</span>
+                        <span>Nuestros Valores</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panel Visual Institucional -->
+            <div class="hero-visual-panel" style="animation: fadeInRight 1s ease-out 0.5s both;">
+                <!-- Marco principal -->
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-3xl); padding: var(--space-8); position: relative; overflow: hidden;">
+                    <!-- Brillo superior -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.5), transparent);"></div>
+                    
+                    <!-- Contenido del panel -->
+                    <div style="text-align: center;">
+                        <!-- Logo/Escudo conceptual -->
+                        <div style="width: 120px; height: 120px; margin: 0 auto var(--space-6); background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3); position: relative;">
+                            🏛️
+                            <div style="position: absolute; inset: -3px; border: 2px solid rgba(245, 158, 11, 0.3); border-radius: 50%; animation: pulse 2s infinite;"></div>
+                        </div>
+
+                        <h3 style="color: white; font-size: var(--text-2xl); font-weight: 700; margin-bottom: var(--space-4);">
+                            COOGUARDPENAL
+                        </h3>
+                        
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: var(--text-base); margin-bottom: var(--space-6); line-height: 1.6;">
+                            <strong>Cooperativa Multiactiva</strong><br>
+                            de Trabajadores del INPEC<br>
+                            y Pensionados de Colombia
+                        </p>
+
+                        <!-- Insignias de confianza -->
+                        <div style="display: flex; justify-content: center; gap: var(--space-4);">
+                            <div style="background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg); color: #10B981; font-size: var(--text-sm); font-weight: 600;">
+                                ✓ Confiable
+                            </div>
+                            <div style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.3); padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg); color: #FCD34D; font-size: var(--text-sm); font-weight: 600;">
+                                ✓ Sólida
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Historia -->
-<section class="section">
-    <div class="container">
-        <div class="grid grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 style="margin-bottom: var(--space-6);">Nuestra Historia</h2>
-                <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--gray-700); margin-bottom: var(--space-6);">
-                    COOGUARDPENAL nació en 1989 con el noble propósito de brindar apoyo financiero y social a los miembros 
-                    de la Guardia Penitenciaria y Carcelaria Nacional de Colombia. Durante más de tres décadas, hemos sido 
-                    un pilar fundamental en la vida de miles de familias.
-                </p>
-                <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--gray-700); margin-bottom: var(--space-8);">
-                    Comenzamos como una pequeña iniciativa solidaria y hemos crecido hasta convertirnos en una cooperativa 
-                    multiactiva sólida y confiable, siempre manteniendo nuestros valores de solidaridad, transparencia y 
-                    compromiso con nuestros asociados.
-                </p>
-                <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
-                    <div style="text-align: center;">
-                        <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--primary-700);">1989</div>
-                        <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Año de Fundación</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--secondary-700);">35+</div>
-                        <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Años de Servicio</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--accent-700);">5,000+</div>
-                        <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Asociados</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div style="background: linear-gradient(135deg, var(--primary-600), var(--secondary-600)); border-radius: var(--radius-3xl); padding: var(--space-8); color: white; text-align: center;">
-                    <div style="font-size: var(--text-8xl); margin-bottom: var(--space-4);">🏛️</div>
-                    <h3 style="color: white; margin-bottom: var(--space-4); font-family: var(--font-sans);">Institución Sólida</h3>
-                    <p style="color: rgba(255,255,255,0.9); margin: 0;">
-                        Una cooperativa con bases firmes, respaldada por décadas de experiencia y el compromiso 
-                        inquebrantable con nuestros asociados.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Misión, Visión y Objetivo -->
-<section class="section section-alt">
+<!-- Historia Premium -->
+<section class="section section-security" id="nuestra-historia">
     <div class="container">
         <div class="text-center" style="margin-bottom: var(--space-16);">
-            <h2>Nuestros Fundamentos</h2>
-            <p class="lead" style="max-width: 600px; margin: 0 auto;">
-                Los principios que guían nuestro compromiso diario
+            <h2>
+                Nuestra 
+                <span style="background: linear-gradient(135deg, var(--secondary-400), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Historia
+                </span>
+            </h2>
+            <p class="lead" style="max-width: 800px; margin: 0 auto; color: var(--primary-600);">
+                Un legado de <strong>más de 35 años</strong> transformando vidas y construyendo 
+                un futuro mejor para la comunidad penitenciaria
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1989</div>
+                        <div class="timeline-content">
+                            <h4>Fundación</h4>
+                            <p>
+                                <strong>COOGUARDPENAL nació con un noble propósito:</strong> brindar apoyo 
+                                financiero y social a los miembros de la Guardia Penitenciaria y Carcelaria 
+                                Nacional de Colombia.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000s</div>
+                        <div class="timeline-content">
+                            <h4>Crecimiento</h4>
+                            <p>
+                                <strong>Expansión de servicios</strong> y consolidación como cooperativa 
+                                multiactiva, manteniendo nuestros valores de solidaridad y transparencia.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h4>Liderazgo</h4>
+                            <p>
+                                <strong>Cooperativa líder</strong> en el sector, con más de 5,000 asociados 
+                                y las mejores tasas del mercado financiero.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-stats">
+                    <div class="card card-stat-premium text-center">
+                        <div class="card-stat-value" style="background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">1989</div>
+                        <div class="card-stat-label">Año de Fundación</div>
+                    </div>
+                    <div class="card card-stat-premium text-center">
+                        <div class="card-stat-value" style="background: linear-gradient(135deg, var(--info), var(--primary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">35+</div>
+                        <div class="card-stat-label">Años de Servicio</div>
+                    </div>
+                    <div class="card card-stat-premium text-center">
+                        <div class="card-stat-value" style="background: linear-gradient(135deg, var(--success), #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">5K+</div>
+                        <div class="card-stat-label">Asociados Activos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="card card-premium" style="text-align: center; background: linear-gradient(135deg, var(--primary-900), var(--primary-800)); color: var(--white); overflow: hidden;">
+                    <div style="font-size: var(--text-8xl); margin-bottom: var(--space-6); animation: float 3s ease-in-out infinite;">🏛️</div>
+                    <h3 style="color: white; margin-bottom: var(--space-6); font-family: var(--font-sans); font-size: var(--text-3xl);">
+                        Institución <span style="color: var(--secondary-400);">Sólida</span>
+                    </h3>
+                    <p style="color: rgba(255,255,255,0.95); margin-bottom: var(--space-6); font-size: var(--text-lg); line-height: 1.6;">
+                        <strong>Una cooperativa con bases firmes,</strong> respaldada por décadas de experiencia 
+                        y el compromiso inquebrantable con nuestros asociados y sus familias.
+                    </p>
+                    <div class="card-badge" style="background: linear-gradient(135deg, var(--success), #059669); margin: 0 auto;">
+                        ✅ Confianza Garantizada
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Misión, Visión y Objetivo Premium -->
+<section class="section section-alt" id="mision-vision">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>
+                Nuestros 
+                <span style="background: linear-gradient(135deg, var(--secondary-400), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Fundamentos
+                </span>
+            </h2>
+            <p class="lead" style="max-width: 700px; margin: 0 auto; color: var(--primary-600);">
+                Los <strong>principios rectores</strong> que guían cada decisión y acción en nuestro 
+                compromiso diario con la comunidad penitenciaria
             </p>
         </div>
         
         <div class="grid grid-cols-3 gap-8">
-            <div class="card card-feature">
-                <div class="card-icon" style="background: linear-gradient(135deg, var(--primary-100), var(--primary-200)); color: var(--primary-700);">
-                    🎯
+            <!-- Misión Premium -->
+            <div class="card card-premium">
+                <div class="card-header">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Nuestra Misión</h3>
+                    <div class="card-badge">🌟 Propósito</div>
                 </div>
-                <h3 class="card-title">Nuestra Misión</h3>
                 <p class="card-text">
-                    Es la razón del pensamiento en el bienestar común poniendo a su disposición nuestros servicios y beneficios 
-                    para que usted no solo conozca, sino que también los disfrute, venga y haga parte del progreso que les 
-                    brinda COOGUARDPENAL a sus asociados.
+                    <strong>Transformar vidas a través del bienestar común.</strong> Ponemos a disposición 
+                    de nuestros asociados servicios y beneficios excepcionales para que no solo los conozcan, 
+                    sino que los disfruten plenamente. Únete al progreso que COOGUARDPENAL brinda.
                 </p>
+                <div class="card-cta">
+                    <span class="btn btn-ghost" style="width: 100%; pointer-events: none;">
+                        💡 Bienestar Común
+                    </span>
+                </div>
             </div>
             
-            <div class="card card-feature">
-                <div class="card-icon" style="background: linear-gradient(135deg, var(--secondary-100), var(--secondary-200)); color: var(--secondary-700);">
-                    👁️
+            <!-- Visión Premium -->
+            <div class="card card-popular">
+                <div class="card-header">
+                    <div class="card-icon">👁️</div>
+                    <h3 class="card-title">Nuestra Visión</h3>
+                    <div class="card-badge badge-info">🚀 Futuro</div>
                 </div>
-                <h3 class="card-title">Nuestra Visión</h3>
                 <p class="card-text">
-                    Responder oportunamente a las necesidades de nuestros asociados con el ánimo de que estos tengan una 
-                    mejor calidad de vida.
+                    <strong>Responder oportunamente a las necesidades</strong> de nuestros asociados 
+                    con el firme propósito de que alcancen una mejor calidad de vida, construyendo 
+                    un futuro próspero para toda la comunidad.
                 </p>
+                <div class="card-cta">
+                    <span class="btn btn-secondary" style="width: 100%; pointer-events: none;">
+                        ⭐ Calidad de Vida
+                    </span>
+                </div>
             </div>
             
-            <div class="card card-feature">
-                <div class="card-icon" style="background: linear-gradient(135deg, var(--accent-100), var(--accent-200)); color: var(--accent-700);">
-                    🎯
+            <!-- Objetivo Premium -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--success), #059669);">🎯</div>
+                    <h3 class="card-title">Nuestro Objetivo</h3>
+                    <div class="card-badge badge-warning">💰 Acción</div>
                 </div>
-                <h3 class="card-title">Nuestro Objetivo</h3>
                 <p class="card-text">
-                    Otorgar préstamos a nuestros asociados con cómodas tasas de interés, descontados directamente por nómina 
-                    de acuerdo a su capacidad de endeudamiento y fomentando el ahorro entre los mismos; a fin de que contribuyan 
+                    <strong>Otorgar préstamos con tasas preferenciales,</strong> descontados directamente 
+                    por nómina según la capacidad de endeudamiento, fomentando el ahorro y contribuyendo 
                     efectivamente al mejoramiento de las condiciones de vida del asociado y su familia.
                 </p>
+                <div class="card-cta">
+                    <span class="btn btn-primary" style="width: 100%; pointer-events: none;">
+                        📈 Crecimiento
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Valores -->
+<!-- Valores Premium -->
 <section class="section">
     <div class="container">
         <div class="text-center" style="margin-bottom: var(--space-16);">
-            <h2>Nuestros Valores</h2>
-            <p class="lead" style="max-width: 600px; margin: 0 auto;">
-                Los principios que nos definen como cooperativa
+            <h2>
+                Nuestros 
+                <span style="background: linear-gradient(135deg, var(--secondary-400), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Valores
+                </span>
+            </h2>
+            <p class="lead" style="max-width: 700px; margin: 0 auto; color: var(--primary-600);">
+                Los <strong>principios fundamentales</strong> que nos definen como cooperativa 
+                y guían nuestra relación con cada asociado
             </p>
         </div>
         
         <div class="grid grid-cols-2 gap-8">
-            <div class="card" style="border-left: 4px solid var(--primary-600);">
-                <h4 style="color: var(--primary-700); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
-                    🤝 Solidaridad
-                </h4>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Creemos en el apoyo mutuo y en la fuerza de trabajar unidos para alcanzar objetivos comunes 
-                    que beneficien a toda nuestra comunidad cooperativa.
+            <!-- Solidaridad -->
+            <div class="card value-card value-primary">
+                <div class="value-header">
+                    <div class="value-icon">🤝</div>
+                    <h4 class="value-title">Solidaridad</h4>
+                </div>
+                <p class="value-text">
+                    <strong>Creemos en el apoyo mutuo</strong> y en la fuerza de trabajar unidos para 
+                    alcanzar objetivos comunes que beneficien a toda nuestra comunidad cooperativa. 
+                    Juntos somos más fuertes.
                 </p>
+                <div class="value-accent"></div>
             </div>
             
-            <div class="card" style="border-left: 4px solid var(--secondary-600);">
-                <h4 style="color: var(--secondary-700); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
-                    💎 Transparencia
-                </h4>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Mantenemos comunicación clara, honesta y abierta en todas nuestras operaciones, 
-                    construyendo confianza a través de la honestidad.
+            <!-- Transparencia -->
+            <div class="card value-card value-secondary">
+                <div class="value-header">
+                    <div class="value-icon">💎</div>
+                    <h4 class="value-title">Transparencia</h4>
+                </div>
+                <p class="value-text">
+                    <strong>Mantenemos comunicación clara, honesta y abierta</strong> en todas nuestras 
+                    operaciones, construyendo confianza duradera a través de la honestidad y la integridad.
                 </p>
+                <div class="value-accent"></div>
             </div>
             
-            <div class="card" style="border-left: 4px solid var(--accent-600);">
-                <h4 style="color: var(--accent-700); margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
-                    🎯 Compromiso
-                </h4>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Nos dedicamos completamente a servir a nuestros asociados, cumpliendo nuestras promesas 
-                    y superando las expectativas en cada interacción.
+            <!-- Compromiso -->
+            <div class="card value-card value-success">
+                <div class="value-header">
+                    <div class="value-icon">🎯</div>
+                    <h4 class="value-title">Compromiso</h4>
+                </div>
+                <p class="value-text">
+                    <strong>Nos dedicamos completamente a servir</strong> a nuestros asociados, cumpliendo 
+                    nuestras promesas y superando las expectativas en cada interacción y servicio.
                 </p>
+                <div class="value-accent"></div>
             </div>
             
-            <div class="card" style="border-left: 4px solid #8B5CF6;">
-                <h4 style="color: #8B5CF6; margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2);">
-                    ⭐ Excelencia
-                </h4>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Buscamos constantemente la mejora continua en nuestros servicios, procesos y atención, 
-                    para ofrecer siempre lo mejor a nuestros asociados.
+            <!-- Excelencia -->
+            <div class="card value-card value-info">
+                <div class="value-header">
+                    <div class="value-icon">⭐</div>
+                    <h4 class="value-title">Excelencia</h4>
+                </div>
+                <p class="value-text">
+                    <strong>Buscamos constantemente la mejora continua</strong> en nuestros servicios, 
+                    procesos y atención, para ofrecer siempre lo mejor a nuestros asociados y sus familias.
                 </p>
+                <div class="value-accent"></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Estructura Organizacional -->
+<!-- Estructura Organizacional Premium -->
 <section class="section section-alt">
     <div class="container">
         <div class="text-center" style="margin-bottom: var(--space-16);">
-            <h2>Estructura Organizacional</h2>
-            <p class="lead" style="max-width: 700px; margin: 0 auto;">
-                Gobernanza democrática y participativa que garantiza transparencia y representación
+            <h2>
+                Estructura 
+                <span style="background: linear-gradient(135deg, var(--secondary-400), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Organizacional
+                </span>
+            </h2>
+            <p class="lead" style="max-width: 800px; margin: 0 auto; color: var(--primary-600);">
+                <strong>Gobernanza democrática y participativa</strong> que garantiza transparencia, 
+                representación y toma de decisiones colaborativa en beneficio de todos
             </p>
         </div>
         
         <div class="grid grid-cols-3 gap-8">
-            <div class="card text-center">
-                <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🏛️</div>
-                <h3 style="color: var(--primary-700); margin-bottom: var(--space-3);">Asamblea General</h3>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Máximo órgano de dirección donde todos los asociados tienen voz y voto 
-                    en las decisiones importantes de la cooperativa.
+            <!-- Asamblea General -->
+            <div class="card organizational-card text-center">
+                <div class="organizational-icon organizational-primary">🏛️</div>
+                <h3 class="organizational-title">Asamblea General</h3>
+                <div class="organizational-badge">👑 Máximo Órgano</div>
+                <p class="organizational-text">
+                    <strong>Máximo órgano de dirección</strong> donde todos los asociados tienen voz y voto 
+                    en las decisiones importantes de la cooperativa. La democracia en acción.
                 </p>
+                <div class="organizational-stats">
+                    <div class="org-stat">
+                        <div class="org-stat-value">5K+</div>
+                        <div class="org-stat-label">Asociados</div>
+                    </div>
+                </div>
             </div>
             
-            <div class="card text-center">
-                <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">👥</div>
-                <h3 style="color: var(--secondary-700); margin-bottom: var(--space-3);">Consejo de Administración</h3>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Órgano elegido democráticamente que administra y dirige la cooperativa 
-                    según las directrices de la Asamblea General.
+            <!-- Consejo de Administración -->
+            <div class="card organizational-card text-center">
+                <div class="organizational-icon organizational-secondary">👥</div>
+                <h3 class="organizational-title">Consejo de Administración</h3>
+                <div class="organizational-badge organizational-badge-secondary">⚖️ Gobierno</div>
+                <p class="organizational-text">
+                    <strong>Órgano elegido democráticamente</strong> que administra y dirige la cooperativa 
+                    según las directrices de la Asamblea General con transparencia total.
                 </p>
+                <div class="organizational-stats">
+                    <div class="org-stat">
+                        <div class="org-stat-value">24/7</div>
+                        <div class="org-stat-label">Gestión</div>
+                    </div>
+                </div>
             </div>
             
-            <div class="card text-center">
-                <div style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">🔍</div>
-                <h3 style="color: var(--accent-700); margin-bottom: var(--space-3);">Junta de Vigilancia</h3>
-                <p style="color: var(--gray-700); margin: 0;">
-                    Supervisa el cumplimiento de normas, reglamentos y decisiones, 
-                    garantizando transparencia en todas las operaciones.
+            <!-- Junta de Vigilancia -->
+            <div class="card organizational-card text-center">
+                <div class="organizational-icon organizational-success">🔍</div>
+                <h3 class="organizational-title">Junta de Vigilancia</h3>
+                <div class="organizational-badge organizational-badge-success">🛡️ Control</div>
+                <p class="organizational-text">
+                    <strong>Supervisa el cumplimiento de normas</strong>, reglamentos y decisiones, 
+                    garantizando transparencia absoluta en todas las operaciones cooperativas.
                 </p>
+                <div class="organizational-stats">
+                    <div class="org-stat">
+                        <div class="org-stat-value">100%</div>
+                        <div class="org-stat-label">Transparencia</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Final -->
-<section class="section section-gradient">
-    <div class="container text-center">
-        <h2 style="color: white; margin-bottom: var(--space-6);">¿Quieres ser parte de nuestra historia?</h2>
-        <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
-            Únete a una cooperativa con más de 35 años de experiencia, compromiso y resultados comprobados.
-        </p>
-        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
-            <a href="/contacto/" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-800);">
-                🚀 Quiero Afiliarme
-            </a>
-            <a href="/servicios/" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
-                📋 Ver Servicios
-            </a>
+<!-- CTA Final Espectacular -->
+<section class="section-cta-final">
+    <div class="container">
+        <div class="cta-final-content">
+            <!-- Decoración Superior -->
+            <div class="cta-final-decoration">
+                <div class="cta-decoration-icon">🏛️</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">🤝</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">💎</div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="cta-final-header">
+                <h2 class="cta-final-title">
+                    ¿Listo para ser parte de nuestra 
+                    <span class="title-highlight">historia de éxito</span>?
+                </h2>
+                <div class="cta-final-subtitle">
+                    Únete a una cooperativa con <strong>más de 35 años de experiencia</strong>, 
+                    compromiso inquebrantable y resultados comprobados en el sector financiero.
+                </div>
+            </div>
+
+            <!-- Estadísticas Rápidas -->
+            <div class="cta-stats-mini">
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">1989</div>
+                    <div class="cta-stat-label">Fundación</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">35+</div>
+                    <div class="cta-stat-label">Años</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">5K+</div>
+                    <div class="cta-stat-label">Familias</div>
+                </div>
+            </div>
+
+            <!-- Botones de Acción Premium -->
+            <div class="cta-final-actions">
+                <a href="{% url 'accounts:register' %}" class="btn-cta-primary">
+                    <span class="btn-cta-icon">🚀</span>
+                    <span class="btn-cta-text">Quiero Afiliarme</span>
+                    <span class="btn-cta-shine"></span>
+                </a>
+                
+                <a href="/servicios/" class="btn-cta-secondary">
+                    <span class="btn-cta-icon">📋</span>
+                    <span class="btn-cta-text">Ver Servicios</span>
+                    <span class="btn-cta-pulse"></span>
+                </a>
+            </div>
+
+            <!-- Badge de Seguridad -->
+            <div class="cta-security-badge">
+                <div class="security-badge-icon">🏛️</div>
+                <div class="security-badge-text">
+                    <strong>35+ Años de Confianza</strong><br>
+                    <small>Liderazgo en el sector cooperativo</small>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -1,87 +1,253 @@
 {% extends 'website/base.html' %}
-{% block title %}Servicios - COOGUARDPENAL Ltda.{% endblock %}
+{% block title %}Servicios Financieros - COOGUARDPENAL Ltda.{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="hero section-sm">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title animate-fade-in-down">
-                Servicios <span style="background: linear-gradient(135deg, #FCD34D, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Exclusivos</span>
-            </h1>
-            <p class="hero-subtitle animate-fade-in">
-                Descubre todos los beneficios financieros y servicios especializados que hemos diseñado pensando en ti y tu familia.
-            </p>
+<!-- Hero Section Servicios Financieros Único -->
+<section class="hero-financial" style="background: linear-gradient(135deg, var(--primary-900), var(--secondary-900)); position: relative; overflow: hidden; min-height: 75vh; display: flex; align-items: center; margin-top: var(--space-8); margin-bottom: var(--space-16); padding: var(--space-16) 0;">
+    <!-- Patrón de fondo financiero -->
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(5, 150, 105, 0.1) 1px, transparent 1px), linear-gradient(rgba(5, 150, 105, 0.1) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.4;"></div>
+    
+    <!-- Decoraciones financieras flotantes -->
+    <div style="position: absolute; top: 15%; left: 8%; width: 100px; height: 100px; background: linear-gradient(135deg, rgba(5, 150, 105, 0.2), rgba(5, 150, 105, 0.1)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; animation: float 5s ease-in-out infinite; transform: rotate(12deg);">💰</div>
+    <div style="position: absolute; top: 50%; right: 10%; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; animation: float 7s ease-in-out infinite reverse;">📊</div>
+    <div style="position: absolute; bottom: 25%; left: 15%; width: 90px; height: 90px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; animation: float 6s ease-in-out infinite; transform: rotate(-8deg);">🎓</div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="grid grid-cols-3 gap-12 items-center">
+            <!-- Tasas Destacadas (Izquierda) -->
+            <div class="financial-rates" style="animation: fadeInLeft 1s ease-out;">
+                <div style="background: rgba(5, 150, 105, 0.1); backdrop-filter: blur(15px); border: 1px solid rgba(5, 150, 105, 0.2); border-radius: var(--radius-2xl); padding: var(--space-6); text-align: center; margin-bottom: var(--space-4);">
+                    <div style="color: #10B981; font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--space-2);">Tasa Educativa</div>
+                    <div style="color: white; font-size: var(--text-4xl); font-weight: 900; line-height: 1;">0.8%</div>
+                    <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm);">Mensual</div>
+                </div>
+                
+                <div style="background: rgba(245, 158, 11, 0.1); backdrop-filter: blur(15px); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-2xl); padding: var(--space-6); text-align: center;">
+                    <div style="color: #F59E0B; font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--space-2);">Aprobación</div>
+                    <div style="color: white; font-size: var(--text-4xl); font-weight: 900; line-height: 1;">24h</div>
+                    <div style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm);">Promedio</div>
+                </div>
+            </div>
+
+            <!-- Contenido Principal (Centro) -->
+            <div class="hero-content-financial" style="text-align: center;">
+                <!-- Badge superior financiero -->
+                <div style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(5, 150, 105, 0.2), rgba(5, 150, 105, 0.1)); backdrop-filter: blur(10px); border: 1px solid rgba(5, 150, 105, 0.3); padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); margin-bottom: var(--space-6); animation: fadeInDown 1s ease-out;">
+                    <span style="color: #10B981; font-weight: 700; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 1px;">
+                        💎 Tasas Preferenciales • Aprobación Rápida
+                    </span>
+                </div>
+
+                <h1 style="color: white; font-size: var(--text-5xl); font-weight: 900; line-height: 1.1; margin-bottom: var(--space-6); animation: fadeInUp 1s ease-out 0.2s both;">
+                    Financiamos<br>
+                    <span style="background: linear-gradient(135deg, #10B981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative;">
+                        Tus Sueños
+                        <span style="position: absolute; bottom: -4px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #10B981, #059669); border-radius: 2px; opacity: 0.7;"></span>
+                    </span>
+                </h1>
+
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-lg); line-height: 1.6; margin-bottom: var(--space-8); max-width: 400px; margin-left: auto; margin-right: auto; animation: fadeInUp 1s ease-out 0.4s both;">
+                    Las <strong style="color: #10B981;">mejores tasas del mercado</strong> diseñadas exclusivamente para 
+                    <strong style="color: white;">tu tranquilidad financiera</strong>. Sin trámites complicados.
+                </p>
+
+                <!-- Botones de acción únicos financieros -->
+                <div style="display: flex; gap: var(--space-3); justify-content: center; animation: fadeInUp 1s ease-out 0.6s both;">
+                    <a href="#creditos-educativos" style="background: linear-gradient(135deg, #10B981, #059669); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; font-size: var(--text-sm); display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all); box-shadow: 0 10px 30px rgba(5, 150, 105, 0.3);">
+                        <span>🎓</span>
+                        <span>Educación</span>
+                    </a>
+                    <a href="#creditos-personales" style="background: linear-gradient(135deg, #F59E0B, #D97706); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; font-size: var(--text-sm); display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all); box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);">
+                        <span>💰</span>
+                        <span>Personal</span>
+                    </a>
+                    <a href="#ventajas" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2); color: white; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); text-decoration: none; font-weight: 600; font-size: var(--text-sm); display: inline-flex; align-items: center; gap: var(--space-2); transition: var(--transition-all);">
+                        <span>⚡</span>
+                        <span>Ventajas</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panel de Beneficios (Derecha) -->
+            <div class="financial-benefits" style="animation: fadeInRight 1s ease-out 0.5s both;">
+                <!-- Marco principal de beneficios -->
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-2xl); padding: var(--space-6); position: relative; overflow: hidden;">
+                    <!-- Brillo superior -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(5, 150, 105, 0.5), transparent);"></div>
+                    
+                    <div style="text-align: center; margin-bottom: var(--space-4);">
+                        <h3 style="color: white; font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-4);">
+                            ¿Por qué elegirnos?
+                        </h3>
+                    </div>
+
+                    <!-- Lista de beneficios -->
+                    <div style="space-y: var(--space-3);">
+                        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">✓</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm);">Sin fiador ni codeudor</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #F59E0B, #D97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">✓</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm);">Aprobación en 24 horas</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">✓</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm);">Hasta 120 meses para pagar</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: var(--space-3);">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #EF4444, #DC2626); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm);">✓</div>
+                            <span style="color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm);">Descuento por nómina</span>
+                        </div>
+                    </div>
+
+                    <!-- Badge de confianza -->
+                    <div style="margin-top: var(--space-4); text-align: center;">
+                        <div style="background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); padding: var(--space-2) var(--space-4); border-radius: var(--radius-lg); color: #10B981; font-size: var(--text-xs); font-weight: 600; display: inline-block;">
+                            🛡️ 35+ Años de Confianza
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Servicios Financieros -->
-<section class="section">
+<!-- Servicios Financieros Premium -->
+<section class="section section-security">
     <div class="container">
         <div class="text-center" style="margin-bottom: var(--space-16);">
-            <h2>Servicios Financieros</h2>
-            <p class="lead" style="max-width: 600px; margin: 0 auto;">
-                Soluciones crediticias con las mejores tasas del mercado
+            <h2>
+                Productos Financieros 
+                <span style="background: linear-gradient(135deg, var(--secondary-400), var(--secondary-600)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Exclusivos
+                </span>
+            </h2>
+            <p class="lead" style="max-width: 700px; margin: 0 auto; color: var(--primary-600);">
+                <strong>Las mejores tasas del mercado</strong> y condiciones preferenciales 
+                diseñadas especialmente para nuestros asociados
             </p>
         </div>
         
         <div class="grid grid-cols-2 gap-8">
-            <div class="card" id="creditos" style="background: linear-gradient(135deg, #EFF6FF, #DBEAFE);">
+            <!-- Créditos Educativos Premium -->
+            <div class="card card-premium" id="creditos-educativos">
                 <div class="card-header">
-                    <div class="card-icon" style="background: linear-gradient(135deg, var(--primary-600), var(--primary-500)); color: white;">
-                        🎓
-                    </div>
-                    <h3 class="card-title">Créditos Educativos</h3>
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Créditos Educativos al 0.8%</h3>
+                    <div class="card-badge">⚡ Aprobación Inmediata</div>
                 </div>
-                <div style="background: var(--primary-50); padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
-                    <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--primary-700); text-align: center; margin-bottom: var(--space-2);">
-                        0.8%
-                    </div>
-                    <p style="text-align: center; color: var(--primary-600); font-weight: 600; margin: 0;">
-                        Tasa de interés mensual
-                    </p>
+
+                <div class="card-rate-highlight">
+                    <div class="rate-number">0.8%</div>
+                    <div class="rate-label">Mensual</div>
+                    <div class="rate-description">La tasa más baja del mercado</div>
                 </div>
+
                 <p class="card-text">
-                    <strong>Características:</strong><br>
-                    • Aprobación inmediata<br>
-                    • Sin codeudor<br>
-                    • Descuento directo por nómina<br>
-                    • Para estudios propios o familiares<br>
-                    • Hasta 60 meses para pagar
+                    <strong>Invierte en tu futuro y el de tu familia</strong> con la tasa de interés más competitiva. 
+                    Sin papeleos complicados, sin codeudor y con respuesta inmediata.
                 </p>
-                <div style="margin-top: auto;">
-                    <a href="/contacto/" class="btn btn-primary" style="width: 100%; justify-content: center; display: flex;">
-                        💬 Solicitar Ahora
+
+                <div class="card-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <span class="feature-text">Aprobación inmediata</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚫</span>
+                        <span class="feature-text">Sin codeudor requerido</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💳</span>
+                        <span class="feature-text">Descuento directo por nómina</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                        <span class="feature-text">Para estudios propios o familiares</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📅</span>
+                        <span class="feature-text">Hasta 60 meses para pagar</span>
+                    </div>
+                </div>
+
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value">60</div>
+                        <div class="card-stat-label">Meses Máx.</div>
+                    </div>
+                    <div class="card-stat">
+                        <div class="card-stat-value">Sin límite</div>
+                        <div class="card-stat-label">Monto</div>
+                    </div>
+                </div>
+
+                <div class="card-cta">
+                    <a href="/contacto/" class="btn btn-primary" style="width: 100%;">
+                        💡 Solicitar Ahora
                     </a>
                 </div>
             </div>
             
-            <div class="card" style="background: linear-gradient(135deg, #F0FDF4, #DCFCE7);">
+            <!-- Créditos Personales Premium -->
+            <div class="card card-popular" id="creditos-personales">
                 <div class="card-header">
-                    <div class="card-icon" style="background: linear-gradient(135deg, var(--secondary-600), var(--secondary-500)); color: white;">
-                        💰
-                    </div>
-                    <h3 class="card-title">Créditos Personales</h3>
+                    <div class="card-icon">💰</div>
+                    <h3 class="card-title">Créditos Personales al 1.2%</h3>
+                    <div class="card-badge badge-info">🔥 Más Solicitado</div>
                 </div>
-                <div style="background: var(--secondary-50); padding: var(--space-4); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
-                    <div style="font-size: var(--text-4xl); font-weight: 700; color: var(--secondary-700); text-align: center; margin-bottom: var(--space-2);">
-                        1.2%
-                    </div>
-                    <p style="text-align: center; color: var(--secondary-600); font-weight: 600; margin: 0;">
-                        Tasa de interés mensual
-                    </p>
+
+                <div class="card-rate-highlight" style="background: linear-gradient(135deg, var(--info), var(--primary-600));">
+                    <div class="rate-number">1.2%</div>
+                    <div class="rate-label">Mensual</div>
+                    <div class="rate-description">Tasa competitiva garantizada</div>
                 </div>
+
                 <p class="card-text">
-                    <strong>Características:</strong><br>
-                    • Préstamos hasta $20.000.000<br>
-                    • Evaluación según capacidad de pago<br>
-                    • Descuento automático por nómina<br>
-                    • Para cualquier necesidad personal<br>
-                    • Plazo flexible de pago
+                    <strong>Para cualquier proyecto personal</strong> que tengas en mente. 
+                    Préstamos hasta $20.000.000 con evaluación personalizada según tu capacidad de pago.
                 </p>
-                <div style="margin-top: auto;">
-                    <a href="/contacto/" class="btn btn-secondary" style="width: 100%; justify-content: center; display: flex;">
+
+                <div class="card-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">💵</span>
+                        <span class="feature-text">Hasta $20.000.000</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span class="feature-text">Evaluación personalizada</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔄</span>
+                        <span class="feature-text">Descuento automático</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">Para cualquier necesidad</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⏰</span>
+                        <span class="feature-text">Plazo flexible de pago</span>
+                    </div>
+                </div>
+
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value">$20M</div>
+                        <div class="card-stat-label">Monto Máx.</div>
+                    </div>
+                    <div class="card-stat">
+                        <div class="card-stat-value">Flexible</div>
+                        <div class="card-stat-label">Plazo</div>
+                    </div>
+                </div>
+
+                <div class="card-cta">
+                    <a href="/contacto/" class="btn btn-secondary" style="width: 100%;">
                         📋 Más Información
                     </a>
                 </div>
@@ -90,20 +256,192 @@
     </div>
 </section>
 
-<!-- CTA Final -->
-<section class="section section-gradient">
-    <div class="container text-center">
-        <h2 style="color: white; margin-bottom: var(--space-6);">¿Necesitas Más Información?</h2>
-        <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
-            Nuestro equipo está listo para asesorarte y ayudarte a encontrar el servicio perfecto para ti.
-        </p>
-        <div style="display: flex; justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
-            <a href="/contacto/" class="btn btn-primary btn-lg" style="background: white; color: var(--primary-800);">
-                📞 Hablar con un Asesor
-            </a>
-            <a href="/portal/" class="btn btn-outline btn-lg" style="border-color: white; color: white;">
-                🚀 Acceder al Portal
-            </a>
+<!-- Ventajas Competitivas -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>¿Por Qué Elegir COOGUARDPENAL?</h2>
+            <p class="lead" style="max-width: 800px; margin: 0 auto; color: var(--primary-600);">
+                Más de <strong>35 años de experiencia</strong> respaldando a la Guardia Penitenciaria 
+                con beneficios únicos y condiciones excepcionales
+            </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--success), #059669);">🏆</div>
+                    <h3 class="card-title">Tasas Más Bajas</h3>
+                </div>
+                <p class="card-text">
+                    <strong>Garantizamos las mejores tasas del mercado.</strong> 
+                    Nuestros créditos educativos al 0.8% mensual son imbatibles en el sector financiero.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value" style="color: var(--success);">0.8%</div>
+                        <div class="card-stat-label">Tasa Mínima</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--info), var(--primary-600));">⚡</div>
+                    <h3 class="card-title">Aprobación Inmediata</h3>
+                </div>
+                <p class="card-text">
+                    <strong>Sin trámites engorrosos ni esperas.</strong> 
+                    Nuestro sistema automatizado evalúa y aprueba tu solicitud en tiempo real.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value" style="color: var(--info);">24h</div>
+                        <div class="card-stat-label">Máximo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--warning), #EAB308);">🛡️</div>
+                    <h3 class="card-title">Respaldo Institucional</h3>
+                </div>
+                <p class="card-text">
+                    <strong>35+ años de confianza y solidez.</strong> 
+                    Somos la cooperativa líder para la Guardia Penitenciaria en Colombia.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <div class="card-stat-value" style="color: var(--warning);">35+</div>
+                        <div class="card-stat-label">Años</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Estadísticas de Servicios -->
+<section class="section" style="background: var(--primary-50);">
+    <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-16);">
+            <h2>Resultados que Hablan por Sí Mismos</h2>
+            <p class="lead" style="max-width: 600px; margin: 0 auto; color: var(--primary-600);">
+                Miles de asociados ya confían en nuestros servicios financieros
+            </p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-8">
+            <div class="card card-stat-premium card-stat-experience text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
+                    5K+
+                </div>
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Créditos Otorgados</h3>
+                <p class="card-text" style="margin: 0;">
+                    Miles de familias han logrado sus sueños con nuestros créditos.
+                </p>
+            </div>
+
+            <div class="card card-stat-premium card-stat-members text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
+                    98%
+                </div>
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Aprobación</h3>
+                <p class="card-text" style="margin: 0;">
+                    Tasa de aprobación para asociados activos en regla.
+                </p>
+            </div>
+
+            <div class="card card-stat-premium card-stat-satisfaction text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
+                    $50B+
+                </div>
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Desembolsado</h3>
+                <p class="card-text" style="margin: 0;">
+                    Total de recursos entregados a nuestros asociados.
+                </p>
+            </div>
+
+            <div class="card card-stat-premium card-stat-support text-center">
+                <div class="card-stat-value" style="font-size: var(--text-6xl); margin-bottom: var(--space-4);">
+                    24/7
+                </div>
+                <h3 class="card-title" style="margin-bottom: var(--space-2);">Soporte</h3>
+                <p class="card-text" style="margin: 0;">
+                    Atención permanente para resolver todas tus dudas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final Espectacular -->
+<section class="section-cta-final">
+    <div class="container">
+        <div class="cta-final-content">
+            <!-- Decoración Superior -->
+            <div class="cta-final-decoration">
+                <div class="cta-decoration-icon">💰</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">🎓</div>
+                <div class="cta-decoration-line"></div>
+                <div class="cta-decoration-icon">⚡</div>
+            </div>
+
+            <!-- Contenido Principal -->
+            <div class="cta-final-header">
+                <h2 class="cta-final-title">
+                    ¿Listo para obtener tu 
+                    <span class="title-highlight">crédito ideal</span>?
+                </h2>
+                <div class="cta-final-subtitle">
+                    Nuestro equipo de <strong>asesores especializados</strong> está listo para ayudarte 
+                    a encontrar el producto financiero perfecto para tus necesidades.
+                </div>
+            </div>
+
+            <!-- Estadísticas Rápidas -->
+            <div class="cta-stats-mini">
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">0.8%</div>
+                    <div class="cta-stat-label">Tasa Mín.</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">24h</div>
+                    <div class="cta-stat-label">Aprobación</div>
+                </div>
+                <div class="cta-stat-separator">•</div>
+                <div class="cta-stat-item">
+                    <div class="cta-stat-number">$20M</div>
+                    <div class="cta-stat-label">Máximo</div>
+                </div>
+            </div>
+
+            <!-- Botones de Acción Premium -->
+            <div class="cta-final-actions">
+                <a href="/contacto/" class="btn-cta-primary">
+                    <span class="btn-cta-icon">📞</span>
+                    <span class="btn-cta-text">Hablar con un Asesor</span>
+                    <span class="btn-cta-shine"></span>
+                </a>
+                
+                <a href="{% url 'accounts:register' %}" class="btn-cta-secondary">
+                    <span class="btn-cta-icon">🚀</span>
+                    <span class="btn-cta-text">Crear Cuenta</span>
+                    <span class="btn-cta-pulse"></span>
+                </a>
+            </div>
+
+            <!-- Badge de Seguridad -->
+            <div class="cta-security-badge">
+                <div class="security-badge-icon">💳</div>
+                <div class="security-badge-text">
+                    <strong>Aprobación Garantizada</strong><br>
+                    <small>Para asociados activos en regla</small>
+                </div>
+            </div>
         </div>
     </div>
 </section>
